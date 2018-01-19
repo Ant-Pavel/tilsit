@@ -1,0 +1,32 @@
+.news {
+	border: 1px solid #e1e2f0;
+	padding-left: 12px;
+	padding-right: 12px;
+	padding-bottom: 13px;
+}
+
+.news__title {
+	display: block;
+	font-size: 20px;
+	line-height: 24px;
+	color: #363636;
+}
+
+.news--latest {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	padding: 0;
+	border: none;
+	padding-right: 24px;
+}
+
+.news--latest:after {
+	position: absolute;
+	content: "";
+	top: 0;
+	bottom: 80px;
+	right: 0;
+	width: 1px;
+	background-color: #e1e1e1;
+}

@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="styles/css/style.css">
 </head>
 <body>
-	<div class="cite-wrapper">
+	<div class="container">
 		<header class="page-header">
 			<div class="page-header__top">
 				<div class="page-header__logo">
@@ -16,49 +16,120 @@
 				<div class="page-header__slogan">
 					Оперативно, интересно о важном
 				</div>
-				<div class="page-header__search">
+				<div class="page-header__search-block">
 					<form class="search-form" action="#">
-						<label class="field__text" for="">
-							<input type="text" class="field__text-input">
+						<label class="field-text" for="">
+							<input type="text" class="field-text__input">
 						</label>
 						<button class="search-form__button"></button>
 					</form>
 				</div>
 				<div class="page-header__social">
-					<span class="page-header__social-text"></span>
-					<span class="page-header__social-link"></span>
-					<span class="page-header__social-link"></span>
+					<span class="page-header__social-text">Подписывайтесь</span>
+					<a href="#" class="page-header__social-link page-header__social-link--vk"></a>
+					<a href="#" class="page-header__social-link page-header__social-link--fb"></a>
 				</div>
-				<div class="button">Прислать новость</div>
+				<div class="button button--page-header">Прислать новость</div>
 			</div>
 
 			<nav class="page-header__nav">
-				<ul>
-					<li><a href="#">Город</a></li>
-					<li><a href="#">Новости</a></li>
-					<li><a href="#">Экономика</a></li>
-					<li><a href="#">Галерея</a></li>
-					<li><a href="#">Транспорт</a></li>
+				<ul class="page-header__nav-list">
+					<li class="page-header__nav-item"><a href="#">Город</a></li>
+					<li class="page-header__nav-item"><a href="#">Новости</a></li>
+					<li class="page-header__nav-item"><a href="#">Экономика</a></li>
+					<li class="page-header__nav-item"><a href="#">Галерея</a></li>
+					<li class="page-header__nav-item"><a href="#">Транспорт</a></li>
 				</ul>
 			</nav>
 		</header>
-		<div class="base">
-			<div class="slider-index-top">
-				<a href="#" class="slider-index-top__link">
-					<img src="" alt="">
-				</a>
+		<div class="container container--columns">
+			<div class="base-860">
+				<div class="slider-index-top">
+					<a href="#" class="slider-index-top__link">
+						<img class="slider-index-top__image src="" alt="">
+					</a>
+				</div>
+				<div class="video-index-top">
+					<div class="video-index-top__video"></div>
+					<div class="video-index-top__info">
+						<div class="video-index-top__title">Заголовок</div>
+						<div class="video-index-top__text">Краткое описание к видео Приступая к доказательству следует безапелляционно заявить, что геодезическая линия стремительно позиционирует постулат, как и предполагалось.</div>
+						<buttton class="button button--video">Смотреть все видео</buttton>
+					</div>
+				</div>
 			</div>
-			<div class="video-index-top">
-				<div class="video-index-top__video"></div>
-				<div class="video-index-top__title"></div>
+			<div class="sidebar-292">
+				<div class="news">
+					<span class="news__title">Важные новости</span>
+					<div class="news-item">
+						<div class="news-item__img">
+							<img src="" alt="">
+							<div class="news-item__img-overlay">
+								<date class="news-item__date">01 декабря  2018</date>
+								<a class="news-item__link">Подробнее</a>
+							</div>
+						</div>
+						<div class="news-item__title">Как прошел концерт</div>
+					</div>
+					<div class="news-item">
+						<div class="news-item__img">
+							<img src="" alt="">
+							<div class="news-item__img-overlay">
+								<date class="news-item__date">01 декабря  2018</date>
+								<a class="news-item__link">Подробнее</a>
+							</div>
+						</div>
+						<div class="news-item__title">Как прошёл концерт Pompe в рамках второй части </div>
+					</div>
+					<button class="button button--news">Читать все новости</button>
+				</div>
 			</div>
 		</div>
-		<div class="sidebar">
-			<div class="news-item"></div>
-			<div class="news-item"></div>
-			<div class="button"></div>
+		<div class="banner">
+			<img class="banner__img" src="" alt="">
 		</div>
-		<div class="delimiter"></div>
+		<div class="container">
+			<div class="base-855">
+				<div class="news news--latest">
+					<div class="news-item">
+						<div class="news-item__img">
+							<img src="" alt="">
+							<div class="news-item__img-overlay">
+								<date class="news-item__date">01 декабря  2018</date>
+								<a class="news-item__link">Подробнее</a>
+							</div>
+						</div>
+						<div class="news-item__title">Как прошел концерт</div>
+					</div>
+					<div class="news-item">
+						<div class="news-item__img">
+							<img src="" alt="">
+							<div class="news-item__img-overlay">
+								<date class="news-item__date">01 декабря  2018</date>
+								<a class="news-item__link">Подробнее</a>
+							</div>
+						</div>
+						<div class="news-item__title">Как прошел концерт</div>
+					</div>
+					<div class="news-item">
+						<div class="news-item__img">
+							<img src="" alt="">
+							<div class="news-item__img-overlay">
+								<date class="news-item__date">01 декабря  2018</date>
+								<a class="news-item__link">Подробнее</a>
+							</div>
+						</div>
+						<div class="news-item__title">Как прошел концерт</div>
+					</div>
+				</div>
+			</div>
+		
+			<div class="sidebar">
+				<link rel="stylesheet" type="text/css" href="https://fortrader.org/informers/css?id=413"><div class='FTinformersWrapper FT629bbd8cd1b49230a1c17b101bb322d6 FT1365368104'><script>document.querySelector(".FT629bbd8cd1b49230a1c17b101bb322d6.FT1365368104").style.opacity=0;</script><div class="informer_box informer_box_example clearfix alignCenter "><div class="inlineBlock"><table class="informer_table white  wwwhite"><thead><th colspan="2"><a target="_blank" href="https://fortrader.org/currencyrates">Курсы валют ЦБ РФ</a></th></thead><tbody><tr class="col1"><th>Валюта</th><th>RUB</th></tr><tr class="col2 trClass " data-symbol="Доллар США" data-id="2"><td class="amount_big bigFlag"><span class="style5ImgWrap"><img src="https://files.fortrader.org/service_uploads/country/flags/shiny/48/US.png" alt=""></span><a class="symbolContainer" target="_blank" title="Доллар США" href="https://fortrader.org/currencyrates/usd">USD</a></td><td class="changeVal arrow" data-column="todayCourse"></td></tr><tr class="col3 trClass " data-symbol="Евро" data-id="21"><td class="amount_big bigFlag"><span class="style5ImgWrap"><img src="https://files.fortrader.org/service_uploads/country/flags/shiny/48/EU.png" alt=""></span><a class="symbolContainer" target="_blank" title="Евро" href="https://fortrader.org/currencyrates/eur">EUR</a></td><td class="changeVal arrow" data-column="todayCourse"></td></tr><tr class="col-data"><td colspan="2"><time class='ftDateTime' datetime="2018-01-19MSK17:10"><span class='ftDateTimeStr'>---</span> мск </time></td></tr></tbody></table></div></div></div><script async src="https://fortrader.org/informers/js?id=413&m=1365368104" type="text/javascript"></script>
+			</div>
+		</div>
+		
+
 	</div>
 </body>
 </html>

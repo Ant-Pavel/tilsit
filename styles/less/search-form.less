@@ -1,0 +1,37 @@
+.search-form {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	width: 440px;
+}
+
+.search-form__button {
+	position: absolute;
+	right: 22px;
+	top: 4px;
+	width: 37px;
+	height: 37px;
+	background-color: #e3c31b;
+	border: none;
+}
+
+.search-form__button::after {
+	position: absolute;
+	content: "";
+	right: -20px;
+	top: 5px;
+	height: 28px;
+	width: 1px;
+	background-color: #e7e7e7;
+}
+
+.search-form__button::before {
+	display: none;
+	position: absolute;
+	content: "";
+	left: -20px;
+	top: 5px;
+	height: 28px;
+	width: 1px;
+	background-color: #e7e7e7;
+}
