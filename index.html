@@ -5,23 +5,24 @@
 	<title>Тильзит - Главная страница</title>
 	<meta name="robots" content="noindex, nofollow"/>
 	<link rel="stylesheet" href="styles/css/style.css">
+	<link rel="stylesheet" href="styles/css/slick.css">
+	<link rel="stylesheet" href="styles/css/slick-theme.css">
 </head>
 <body>
 	<div class="container">
 		<header class="page-header">
-			<div class="page-header__top">
-				<div class="page-header__logo">
-					<img src="" alt="">
-				</div>
+				<a href="#" class="page-header__logo">
+					<img src="images/logo--header.png" alt="">
+				</a>
 				<div class="page-header__slogan">
 					Оперативно, интересно о важном
 				</div>
 				<div class="page-header__search-block">
-					<form class="search-form" action="#">
+					<form class="search-form search-form--header search-form--hide" action="">
 						<label class="field-text" for="">
-							<input type="text" class="field-text__input">
+							<input type="text" class="field-text__input" name="s">
 						</label>
-						<button class="search-form__button"></button>
+						<button type="submit" class="search-form__button search-form__button--header"></button>
 					</form>
 				</div>
 				<div class="page-header__social">
@@ -29,28 +30,31 @@
 					<a href="#" class="page-header__social-link page-header__social-link--vk"></a>
 					<a href="#" class="page-header__social-link page-header__social-link--fb"></a>
 				</div>
-				<div class="button button--page-header">Прислать новость</div>
-			</div>
-
-			<nav class="page-header__nav">
-				<ul class="page-header__nav-list">
-					<li class="page-header__nav-item"><a href="#">Город</a></li>
-					<li class="page-header__nav-item"><a href="#">Новости</a></li>
-					<li class="page-header__nav-item"><a href="#">Экономика</a></li>
-					<li class="page-header__nav-item"><a href="#">Галерея</a></li>
-					<li class="page-header__nav-item"><a href="#">Транспорт</a></li>
-				</ul>
-			</nav>
+				<button type="button" class="button button--page-header">Прислать новость</button>
+				<button class="page-header__nav-toggler"></button>
+				<nav class="page-header__nav">
+					<ul class="page-header__nav-list">
+						<li class="page-header__nav-item"><a href="#">Город</a></li>
+						<li class="page-header__nav-item"><a href="#">Новости</a></li>
+						<li class="page-header__nav-item"><a href="#">Экономика</a></li>
+						<li class="page-header__nav-item"><a href="#">Галерея</a></li>
+						<li class="page-header__nav-item"><a href="#">Транспорт</a></li>
+					</ul>
+				</nav>
 		</header>
+	</div>
 		<div class="container container--columns">
-			<div class="base-860">
+			<div class="base--860">
 				<div class="slider-index-top">
 					<a href="#" class="slider-index-top__link">
-						<img class="slider-index-top__image src="" alt="">
+						<img class="slider-index-top__image" src="images/slide-index-top.jpg" alt="">
+					</a>
+					<a href="#" class="slider-index-top__link">
+						<img class="slider-index-top__image" src="images/slide-index-top.jpg" alt="">
 					</a>
 				</div>
 				<div class="video-index-top">
-					<div class="video-index-top__video"></div>
+					<div class="video-index-top__video" style="background-image: url(images/image-video.jpg);"></div>
 					<div class="video-index-top__info">
 						<div class="video-index-top__title">Заголовок</div>
 						<div class="video-index-top__text">Краткое описание к видео Приступая к доказательству следует безапелляционно заявить, что геодезическая линия стремительно позиционирует постулат, как и предполагалось.</div>
@@ -58,12 +62,12 @@
 					</div>
 				</div>
 			</div>
-			<div class="sidebar-292">
-				<div class="news">
-					<span class="news__title">Важные новости</span>
-					<div class="news-item">
+			<div class="sidebar--292">
+				<div class="news-sidebar">
+					<span class="news-sidebar__title">Важные новости</span>
+					<div class="news-item news-item--pr">
 						<div class="news-item__img">
-							<img src="" alt="">
+							<img src="images/bridge.jpg" alt="">
 							<div class="news-item__img-overlay">
 								<date class="news-item__date">01 декабря  2018</date>
 								<a class="news-item__link">Подробнее</a>
@@ -73,7 +77,7 @@
 					</div>
 					<div class="news-item">
 						<div class="news-item__img">
-							<img src="" alt="">
+							<img src="images/circle.jpg" alt="">
 							<div class="news-item__img-overlay">
 								<date class="news-item__date">01 декабря  2018</date>
 								<a class="news-item__link">Подробнее</a>
@@ -81,55 +85,110 @@
 						</div>
 						<div class="news-item__title">Как прошёл концерт Pompe в рамках второй части </div>
 					</div>
-					<button class="button button--news">Читать все новости</button>
+					<button type="button" class="button button--news">Читать все новости</button>
 				</div>
 			</div>
-		</div>
-		<div class="banner">
-			<img class="banner__img" src="" alt="">
 		</div>
 		<div class="container">
-			<div class="base-855">
-				<div class="news news--latest">
+			<div class="banner">
+				<img class="banner__img" src="" alt="">
+			</div>
+		</div>
+		<div class="container container--columns">
+			<div class="base base--855">
+				<div class="news-base">
+				<div class="news-base__title">Последние новости</div>
+				<div class="news-base__container">
 					<div class="news-item">
 						<div class="news-item__img">
-							<img src="" alt="">
+							<img src="images/circle.jpg" alt="">
 							<div class="news-item__img-overlay">
 								<date class="news-item__date">01 декабря  2018</date>
 								<a class="news-item__link">Подробнее</a>
 							</div>
 						</div>
-						<div class="news-item__title">Как прошел концерт</div>
+						<div class="news-item__title">Как прошёл концерт Pompe в рамках второй части </div>
+						<div class="news-item__excerpt">Минтруд предложил изменить состав потребительской корзины</div>
 					</div>
 					<div class="news-item">
 						<div class="news-item__img">
-							<img src="" alt="">
+							<img src="images/circle.jpg" alt="">
 							<div class="news-item__img-overlay">
 								<date class="news-item__date">01 декабря  2018</date>
 								<a class="news-item__link">Подробнее</a>
 							</div>
 						</div>
-						<div class="news-item__title">Как прошел концерт</div>
+						<div class="news-item__title">Как прошёл концерт Pompe в рамках второй части </div>
+						<div class="news-item__excerpt">Минтруд предложил изменить состав потребительской корзины</div>
 					</div>
 					<div class="news-item">
 						<div class="news-item__img">
-							<img src="" alt="">
+							<img src="images/circle.jpg" alt="">
 							<div class="news-item__img-overlay">
 								<date class="news-item__date">01 декабря  2018</date>
 								<a class="news-item__link">Подробнее</a>
 							</div>
 						</div>
-						<div class="news-item__title">Как прошел концерт</div>
+						<div class="news-item__title">Как прошёл концерт Pompe в рамках второй части </div>
+						<div class="news-item__excerpt">Минтруд предложил изменить состав потребительской корзины</div>
 					</div>
+					<div class="news-item">
+						<div class="news-item__img">
+							<img src="images/circle.jpg" alt="">
+							<div class="news-item__img-overlay">
+								<date class="news-item__date">01 декабря  2018</date>
+								<a class="news-item__link">Подробнее</a>
+							</div>
+						</div>
+						<div class="news-item__title">Как прошёл концерт Pompe в рамках второй части </div>
+						<div class="news-item__excerpt">Минтруд предложил изменить состав потребительской корзины</div>
+					</div>
+					<div class="news-item">
+						<div class="news-item__img">
+							<img src="images/circle.jpg" alt="">
+							<div class="news-item__img-overlay">
+								<date class="news-item__date">01 декабря  2018</date>
+								<a class="news-item__link">Подробнее</a>
+							</div>
+						</div>
+						<div class="news-item__title">Как прошёл концерт Pompe в рамках второй части </div>
+						<div class="news-item__excerpt">Минтруд предложил изменить состав потребительской корзины</div>
+					</div>
+					<div class="news-item">
+						<div class="news-item__img">
+							<img src="images/circle.jpg" alt="">
+							<div class="news-item__img-overlay">
+								<date class="news-item__date">01 декабря  2018</date>
+								<a class="news-item__link">Подробнее</a>
+							</div>
+						</div>
+						<div class="news-item__title">Как прошёл концерт Pompe в рамках второй части </div>
+						<div class="news-item__excerpt">Минтруд предложил изменить состав потребительской корзины</div>
+					</div>
+				</div>
 				</div>
 			</div>
 		
-			<div class="sidebar">
-				<link rel="stylesheet" type="text/css" href="https://fortrader.org/informers/css?id=413"><div class='FTinformersWrapper FT629bbd8cd1b49230a1c17b101bb322d6 FT1365368104'><script>document.querySelector(".FT629bbd8cd1b49230a1c17b101bb322d6.FT1365368104").style.opacity=0;</script><div class="informer_box informer_box_example clearfix alignCenter "><div class="inlineBlock"><table class="informer_table white  wwwhite"><thead><th colspan="2"><a target="_blank" href="https://fortrader.org/currencyrates">Курсы валют ЦБ РФ</a></th></thead><tbody><tr class="col1"><th>Валюта</th><th>RUB</th></tr><tr class="col2 trClass " data-symbol="Доллар США" data-id="2"><td class="amount_big bigFlag"><span class="style5ImgWrap"><img src="https://files.fortrader.org/service_uploads/country/flags/shiny/48/US.png" alt=""></span><a class="symbolContainer" target="_blank" title="Доллар США" href="https://fortrader.org/currencyrates/usd">USD</a></td><td class="changeVal arrow" data-column="todayCourse"></td></tr><tr class="col3 trClass " data-symbol="Евро" data-id="21"><td class="amount_big bigFlag"><span class="style5ImgWrap"><img src="https://files.fortrader.org/service_uploads/country/flags/shiny/48/EU.png" alt=""></span><a class="symbolContainer" target="_blank" title="Евро" href="https://fortrader.org/currencyrates/eur">EUR</a></td><td class="changeVal arrow" data-column="todayCourse"></td></tr><tr class="col-data"><td colspan="2"><time class='ftDateTime' datetime="2018-01-19MSK17:10"><span class='ftDateTimeStr'>---</span> мск </time></td></tr></tbody></table></div></div></div><script async src="https://fortrader.org/informers/js?id=413&m=1365368104" type="text/javascript"></script>
+			<div class="sidebar--292">
+				<div class="informer-currency"></div>
+				<div class="informer-vk"></div>
+				<div class="informer-fb"></div>
 			</div>
 		</div>
-		
-
-	</div>
 </body>
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/user.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script>
+	$(document).ready(function(){
+		$('.slider-index-top').slick({
+			"prevArrow": "<button class=\"slick-arrow slick-arrow--prev\"></button>",
+			"nextArrow": "<button class=\"slick-arrow slick-arrow--next\"></button>",
+			"autoplay": true,
+			"autoplaySpeed": 3000,
+			"dots": true,
+			"dotsClass": "slick-dots-custom",
+		});
+	});
+	</script>
 </html>

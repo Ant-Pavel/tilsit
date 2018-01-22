@@ -1,17 +1,115 @@
 /*FONTS*/
+/**/
+/*Roboto regular*/
+@font-face {
+	font-family: "Roboto";
+	font-weight: 400;
+	font-style: normal;
+	src: url(../../fonts/Roboto/Roboto.woff2) format('woff2'), url(../../fonts/Roboto/Roboto.woff) format('woff'), url(../../fonts/Roboto/Roboto.ttf) format('ttf');
+}
 
+/*Roboto medium*/
+@font-face {
+	font-family: "Roboto";
+	font-weight: 500;
+	font-style: normal;
+	src: url(../../fonts/Roboto/Robotomedium.woff2) format('woff2'), url(../../fonts/Roboto/Robotomedium.woff) format('woff'), url(../../fonts/Roboto/Robotomedium.ttf) format('ttf');
+}
+
+/*Roboto thin*/
+@font-face {
+	font-family: "Roboto";
+	font-weight: 200;
+	font-style: normal;
+	src: url(../../fonts/Roboto/Robotothin.woff2) format('woff2'), url(../../fonts/Roboto/Robotothin.woff) format('woff'), url(../../fonts/Roboto/Robotothin.ttf) format('ttf');
+}
+
+/*Roboto Black*/
+@font-face {
+	font-family: "RobotoBlack";
+	font-weight: 400;
+	font-style: normal;
+	src: url(../../fonts/Roboto/Robotoblack.woff2) format('woff2'), url(../../fonts/Roboto/Robotoblack.woff) format('woff'), url(../../fonts/Roboto/Robotoblack.ttf) format('ttf');
+}
+
+/*ProximaNova-Regular*/
+@font-face {
+	font-family: "ProximaNova";
+	font-weight: 400;
+	font-style: normal;
+	src: url(../../fonts/ProximaNova/ProximaNova-Regular.woff) format('woff'), url(../../fonts/ProximaNova/ProximaNova-Regular.eot) format('eot'), url(../../fonts/ProximaNova/ProximaNova-Regular.ttf) format('ttf');
+}
+
+/*ProximaNova-Semibold*/
+@font-face {
+	font-family: "ProximaNova";
+	font-weight: 600;
+	font-style: normal;
+	src: url(../../fonts/ProximaNova/ProximaNova-Semibold.woff) format('woff'), url(../../fonts/ProximaNova/ProximaNova-Semibold.eot) format('eot'), url(../../fonts/ProximaNova/ProximaNova-Semibold.ttf) format('ttf');
+}
+
+/*ProximaNova-Bold*/
+@font-face {
+	font-family: "ProximaNova";
+	font-weight: 700;
+	font-style: normal;
+	src: url(../../fonts/ProximaNova/ProximaNova-Bold.woff) format('woff'), url(../../fonts/ProximaNova/ProximaNova-Bold.eot) format('eot'), url(../../fonts/ProximaNova/ProximaNova-Bold.ttf) format('ttf');
+}
 /********/
+/*********/
 
 * {
 	box-sizing: border-box;
 }
 
 body {
+	color: #343435;
+	font-family: "Roboto", "Arial", sans-serif;
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 20px;
 	background-color: #fff;
 	color: #343435;
 }
 
+.container {
+	width: 1200px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
 
+.container--columns {
+	display: flex;
+	justify-content: space-between;
+}
+
+.container--scroll {
+	position: fixed;
+	z-index: 1;
+	width: 100%;
+	padding: 0;
+	background-color: #fff;
+}
+
+.base--860 {
+	width: 860px;
+}
+
+.base--835 {
+	width: 835px;
+}
+
+.base--855 {
+	width: 855px;
+}
+
+.sidebar--292 {
+	width: 292px;
+}
+
+.sidebar--310 {
+	width: 310px;
+}
 
 /*Mixins*/
 
@@ -26,30 +124,4 @@ body {
 
 /***************/
 
-.container {
-	width: 1200px;
-	margin: 0 auto;
-	padding: 0 15px;
-}
-
-.container--columns {
-	display: flex;
-	justify-content: space-between;
-}
-
-.base-860 {
-	width: 860px;
-}
-
-.sidebar-292 {
-	width: 292px;
-}
-
-.sidebar-310 {
-	width: 310px;
-}
-
-.ba-835 {
-	width: 835px;
-}
 

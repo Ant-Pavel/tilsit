@@ -1,21 +1,30 @@
 .page-header {
-	width: 100%;
+	position: relative;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-top: 10px;
 	margin-bottom: 13px;
+	background-color: #fff;
 }
 
-.page-header__top {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding-top: 10px;
-	padding-bottom: 12px;
+.page-header--scroll {
+	width: 1200px;
+	margin: 10px auto 0;
+	padding: 0 15px;
 }
 
 .page-header__logo {
+	display: block;
+	text-decoration: none;
+	margin-right: 15px;
 	width: 205px;
 	height: 55px;
 	overflow: hidden;
-	.o();
+}
+
+.page-header--scroll .page-header__logo {
+	margin-bottom: 18px;
 }
 
 .page-header__logo img {
@@ -24,22 +33,60 @@
 }
 
 .page-header__slogan {
+	width: 359px;
+	text-align: center;
+	font-family: "ProximaNova";
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 22px;
+	color: #323232;
+}
+
+.page-header__slogan--hide {
 	display: none;
 }
 
-.page-header__search {
-	width: 440px;
+.page-header--scroll .page-header__slogan {
+	display: block;
+	margin-bottom: 18px;
 }
 
-// *************
+/*page-header__search-block*/
+
+.page-header__search-block {
+	margin-right: 13px;
+}
+
+.page-header--scroll .page-header__search-block {
+	display: none;
+	order: 7;
+	width: 320px;
+	margin-right: 0;
+}
+
+.page-header--scroll .page-header__search-block--show {
+	display: block;
+}
+/**/
+
+
+
+/*************/
 /*page-header__social*/
-//****************
+/****************/
 
 .page-header__social {
-	width: 240px;
+	width: 275px;
 	position: relative;
+	text-align: center;
 }
 
+.page-header--scroll .page-header__social {
+	width: 295px;
+	margin-bottom: 18px;
+}
+
+.page-header__social:before,
 .page-header__social:after {
 	position: absolute;
 	content: "";
@@ -50,27 +97,86 @@
 	background-color: #e7e7e7;
 }
 
+.page-header__social:before {
+	left: -1px;
+	right: auto;
+}
+
+.page-header--scroll .page-header__social-text {
+	display: none;
+}
+
 .page-header__social-text {
 	display: inline-block;
 	vertical-align: middle;
-	margin: 0 5px;
+	font-family: "ProximaNova", "Arial", sans-serif;
+	font-size: 18px;
+	line-height: 22px;
+	color: #323232;
 }
 
 .page-header__social-link {
-	margin: 0 5px;
 	display: inline-block;
 	vertical-align: middle;
-	outline: 1px solid black;
 	width: 30px;
 	height: 20px;
+	.bg();
 }
 
-// Page-header__nav
+.page-header__social-link--vk {
+	background-image: url(../../images/icon--vk.png);
+}
+
+.page-header__social-link--fb {
+	height: 22px;
+	background-image: url(../../images/icon--fb.png);
+}
+
+/*Page-header__nav*/
 
 .page-header__nav {
-	padding-top: 10px;
-	padding-bottom: 10px;
+	position: relative;
 	width: 100%;
+	background-color: #242175;
+	margin-top: 12px;
+}
+
+.page-header--scroll .page-header__nav {
+	display: none;
+	width: 850px;
+	margin-top: 0;
+	background-color: #fff;
+}
+
+.page-header--scroll .page-header__nav--show {
+	display: block;
+}
+
+.page-header--scroll .page-header__nav::before {
+	display: none;
+	position: absolute;
+	content: "";
+	top: 0;
+	height: 1px;
+	left: -1000px;
+	right: -1000px;
+	background-color: #e2e2e2;
+}
+
+.page-header--scroll .page-header__nav::after {
+	display: none;
+	position: absolute;
+	content: "";
+	bottom: 0;
+	height: 1px;
+	left: -1000px;
+	right: -1000px;
+	background-color: #e2e2e2;
+}
+
+.page-header--scroll .page-header__nav--show::before,
+.page-header--scroll .page-header__nav--show::after {
+	display: block;
 }
 
 .page-header__nav-list {
@@ -79,25 +185,61 @@
 	list-style: none;
 	display: flex;
 	justify-content: center;
+	flex-wrap: wrap;
 }
 
 .page-header__nav-item a {
 	display: block;
 	position: relative;
-	padding: 0 50px;
+	padding: 10px 50px;
+	margin-right: 3px;
 	text-decoration: none;
 	font-size: 18px;
 	line-height: 22px;
+	font-weight: 500;
+	color: #fff;
+}
+
+.page-header--scroll .page-header__nav-item a {
+	color: #242175;
+	padding: 10px 40px;
 }
 
 .page-header__nav-item:not(:first-child) a:before {
 	position: absolute;
 	content: "";
-	top: 2px;
+	top: 13px;
 	width: 3px;
 	height: 10px;
-	left: 0;
+	left: -3px;
 	background-color: #403b6f;
 }
-	
+
+.page-header__nav-toggler {
+	display: none;
+	position: relative;
+	width: 60px;
+	height: 40px;
+	margin-left: auto;
+	margin-bottom: 18px;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.page-header__nav-toggler:before {
+	position: absolute;
+	content: "";
+	top: 5px;
+	left: 50%;
+	margin-left: -17px;
+	width: 34px;
+	height: 6px;
+	background-color: #242175;
+	box-shadow: 0 12px 0 0 #242175, 0 24px 0 0 #242175;
+}
+
+.page-header--scroll .page-header__nav-toggler {
+	display: block;
+}
 

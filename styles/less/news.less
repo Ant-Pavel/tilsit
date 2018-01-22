@@ -1,31 +1,56 @@
-.news {
+/****************************/
+/*Блок новостей в сайдбаре*/
+/****************************/
+.news-sidebar {
 	border: 1px solid #e1e2f0;
+	margin-top: 11px;
 	padding-left: 12px;
 	padding-right: 12px;
 	padding-bottom: 13px;
 }
 
-.news__title {
-	display: block;
+.news-sidebar__title {
+	position: relative;
+	top: -13px;
+	left: -6px;
+	padding: 0 6px;
+	display: inline-block;
 	font-size: 20px;
 	line-height: 24px;
 	color: #363636;
+	background-color: #fff;
+	font-weight: 500;
 }
 
-.news--latest {
+/****************************/
+/*Блок новостей в базисной колонке*/
+/****************************/
+.news-base {
 	position: relative;
-	display: flex;
-	justify-content: space-between;
 	padding: 0;
 	border: none;
 	padding-right: 24px;
 }
 
-.news--latest:after {
+.news-base__title {
+	margin-bottom: 15px;
+	font-size: 22px;
+	line-height: 26px;
+	color: #363636;
+	font-weight: 500;
+}
+
+.news-base__container {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.news-base:after {
 	position: absolute;
 	content: "";
 	top: 0;
-	bottom: 80px;
+	bottom: 110px;
 	right: 0;
 	width: 1px;
 	background-color: #e1e1e1;

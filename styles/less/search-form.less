@@ -2,20 +2,40 @@
 	position: relative;
 	margin: 0;
 	padding: 0;
-	width: 440px;
+}
+
+.search-form--hide {
+	width: 66px;
+	height: 46px;
+}
+
+.page-header--scroll .search-form {
+	width: auto;
+	height: auto;
 }
 
 .search-form__button {
 	position: absolute;
-	right: 22px;
+	right: 8px;
 	top: 4px;
 	width: 37px;
 	height: 37px;
 	background-color: #e3c31b;
+	background-image: url(../../images/magnifier.png);
+	.bg();
 	border: none;
+	cursor: pointer;
 }
 
-.search-form__button::after {
+.page-header--scroll .search-form__button {
+	top: 3px;
+	right: 3px;
+	width: 28px;
+	height: 28px;
+}
+
+
+.search-form__button::before {
 	position: absolute;
 	content: "";
 	right: -20px;
@@ -26,12 +46,11 @@
 }
 
 .search-form__button::before {
-	display: none;
-	position: absolute;
-	content: "";
 	left: -20px;
-	top: 5px;
-	height: 28px;
-	width: 1px;
-	background-color: #e7e7e7;
+	right: auto;
+}
+
+.search-form--show .search-form__button::before,
+.page-header--scroll .search-form__button::before {
+	display: none;
 }
