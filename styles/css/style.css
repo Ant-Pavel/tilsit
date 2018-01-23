@@ -783,6 +783,17 @@ body {
   background-position: center;
   border: none;
   cursor: pointer;
+  z-index: 2;
+}
+.search-form__button-overlay {
+  position: absolute;
+  z-index: 5;
+  right: 8px;
+  top: 4px;
+  width: 37px;
+  height: 37px;
+  background-color: transparent;
+  cursor: pointer;
 }
 .page-header--scroll .search-form__button {
   top: 3px;
