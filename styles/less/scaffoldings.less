@@ -89,6 +89,7 @@ body {
 	width: 100%;
 	padding: 0;
 	background-color: #fff;
+	transition: all 1s;
 }
 
 .base--860 {
@@ -127,18 +128,30 @@ body {
 // MAP *******
 .index-map {
 	height: 460px;
-	margin-bottom: 30px;
 }
 
+.popover .arrow {
+	width: 0;
+	height: 0;
+	border-top: 15px solid #e5c728; 
+	border-left: 15px solid transparent;
+}
 
 .map__container {
-	position: relative;
+	position: absolute;
+	left: 15px;
+    top: -25px;
 	width: 285px;
 	padding-left: 30px;
 	padding-top: 15px;
 	padding-bottom: 10px;
 	background-color: #e5c728;
 	color: #2b2b2b;
+}
+
+.map__container--contacts {
+	width: 250px;
+	padding-left: 15px;
 }
 
 .map__phone {
@@ -158,4 +171,15 @@ body {
 	margin-bottom: 5px;
 	font-size: 16px;
 	line-height: 20px;
+}
+
+
+// INFORMERS
+
+a.weatherInformer22, a.weatherInformer22:hover {
+	height: 40px;
+}
+
+.informer-vk {
+	margin-bottom: 20px;
 }

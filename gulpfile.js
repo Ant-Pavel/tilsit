@@ -5,7 +5,7 @@ var less = require('gulp-less');
 var plumber = require('gulp-plumber');
 var postcss = require('gulp-postcss');
 var autoprefixer = require('autoprefixer');
-var minify = require('gulp-csso');
+// var minify = require('gulp-csso');
 var rename = require('gulp-rename');
 var bs = require('browser-sync').create();
 
@@ -19,9 +19,9 @@ gulp.task('style', ()=> {
 				})
 		])).
 	pipe(gulp.dest('styles/css')).
-	pipe(minify()).
-	pipe(rename('style.min.css')).
-	pipe(gulp.dest('styles/css')).
+	// pipe(minify()).
+	// pipe(rename('style.min.css')).
+	// pipe(gulp.dest('styles/css')).
 	pipe(bs.stream());
 });
 

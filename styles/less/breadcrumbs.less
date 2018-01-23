@@ -1,0 +1,33 @@
+.breadcrumbs {
+	margin-top: 5px;
+	margin-bottom: 25px;
+}
+
+.breadcrumbs-link {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 5px;
+	font-size: 13px;
+	line-height: 19px;
+	color: #969696;
+}
+
+.breadcrumbs-link--active {
+	color: #2a2779;
+}
+
+.breadcrumbs-link:not(:nth-child(1)) {
+	padding-left: 15px;
+}
+
+.breadcrumbs-link:not(:nth-child(1)):before {
+	position: absolute;
+	content: "";
+	left: 0;
+	top: 5px;
+	.bg();
+	background-image: url(images/);
+	width: 8px;
+	height: 6px;
+}

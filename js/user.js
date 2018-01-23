@@ -44,23 +44,23 @@
 
 		//Прокрутка страницы
 
-		if (page_header.length) {
-		var scrollHeight = Math.max(
-		  document.body.scrollHeight, document.documentElement.scrollHeight,
-		  document.body.offsetHeight, document.documentElement.offsetHeight,
-		  document.body.clientHeight, document.documentElement.clientHeight
-		);
+		// if (page_header.length) {
+		// var scrollHeight = Math.max(
+		//   document.body.scrollHeight, document.documentElement.scrollHeight,
+		//   document.body.offsetHeight, document.documentElement.offsetHeight,
+		//   document.body.clientHeight, document.documentElement.clientHeight
+		// );
 
-		$(window).on('scroll', function() {
-		  if ( ($(window).scrollTop() > (page_header.outerHeight(true) + 25)) && (scrollHeight > 950) ) {
-		   page_header.addClass('page-header--scroll');
-		   page_header.parent('.container').addClass('container--scroll');
-		  } else {
-		   page_header.removeClass('page-header--scroll');
-		   page_header.parent('.container').removeClass('container--scroll');
-		  }
-		});
-		}
+		// $(window).on('scroll', function() {
+		//   if ( ($(window).scrollTop() > (page_header.outerHeight(true) + 25)) && (scrollHeight > 950) ) {
+		//    page_header.addClass('page-header--scroll');
+		//    page_header.parent('.container').addClass('container--scroll');
+		//   } else {
+		//    page_header.removeClass('page-header--scroll');
+		//    page_header.parent('.container').removeClass('container--scroll');
+		//   }
+		// });
+		// }
 
 
 		//Открытие - раскрытие меню при прокрутке страницы

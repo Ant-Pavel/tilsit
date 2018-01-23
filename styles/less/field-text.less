@@ -1,17 +1,24 @@
 .field-text {
 	display: block;
-	width: 425px;
 }
 
-.search-form--hide .field-text {
-	display: none
+.field-text--header {
+	width: 425px;	
+}
+
+.contacts-form .field-text {
+	margin-bottom: 10px;
+}
+
+.search-form--hide .field-text--header {
+	display: none;
 }
 
 .search-form--show .field-text--show {
 	display: block;
 }
 
-.page-header--scroll .field-text {
+.page-header--scroll .field-text--header {
 	display: block;
 	width: 320px;
 }
@@ -24,7 +31,9 @@
 	line-height: 18px;
 }
 
-
+.field-text--header .field-text__input {
+	transition: all 1s;
+}
 
 .page-header--scroll .field-text__input {
 	padding-top: 7px;
