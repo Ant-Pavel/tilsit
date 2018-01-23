@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Тильзит - Главная страница</title>
+	<meta name="robots" content="noindex, nofollow"/>
+	<link rel="stylesheet" href="styles/css/style.css">
+	<link rel="stylesheet" href="styles/css/slick.css">
+	<link rel="stylesheet" href="styles/css/slick-theme.css">
+</head>
+<body>
+	<div class="container">
+		<header class="page-header">
+				<a href="#" class="page-header__logo">
+					<img src="images/logo--header.png" alt="">
+				</a>
+				<div class="page-header__slogan">
+					Оперативно, интересно о важном
+				</div>
+				<div class="page-header__search-block">
+					<form class="search-form search-form--header search-form--hide" action="">
+						<label class="field-text field-text--header" for="">
+							<input type="text" class="field-text__input" name="s">
+						</label>
+						<button type="submit" class="search-form__button search-form__button--header"></button>
+						<span class="search-form__button-overlay"></span>
+					</form>
+				</div>
+				<div class="page-header__social">
+					<span class="page-header__social-text">Подписывайтесь</span>
+					<a href="#" target="_blank" class="page-header__social-link page-header__social-link--vk"></a>
+					<a href="#" target="_blank" class="page-header__social-link page-header__social-link--fb"></a>
+				</div>
+				<button type="button" class="button button--page-header">Прислать новость</button>
+				<button class="page-header__nav-toggler"></button>
+				<nav class="page-header__nav">
+					<ul class="page-header__nav-list">
+						<li class="page-header__nav-item"><a href="#">Город</a></li>
+						<li class="page-header__nav-item"><a href="#">Новости</a></li>
+						<li class="page-header__nav-item"><a href="#">Экономика</a></li>
+						<li class="page-header__nav-item"><a href="#">Галерея</a></li>
+						<li class="page-header__nav-item"><a href="#">Транспорт</a></li>
+						<li class="page-header__nav-item"><a href="contacts.html">Контакты</a></li>
+					</ul>
+				</nav>
+		</header>
+	</div>
+		<div class="container">
+			<div class="breadcrumbs">
+				<span class="breadcrumbs-link">Главная</span>
+				<span class="breadcrumbs-link breadcrumbs-link--active">Раздел</span>
+			</div>
+		</div>
+	<div class="container container--columns">
+		<div class="sidebar sidebar--310">
+			<div class="nav-sidebar">
+				<a class="nav-sidebar__section-name">Город</a>
+					<ul class="nav-sidebar__list">
+						<li class="nav-sidebar__item">
+							<a class="nav-sidebar__link nav-sidebar__link--active" href="#">История города</a>
+							<ul class="nav-sidebar__list-level-2">
+								<li class="nav-sidebar__item-level-2">
+									<a href="#" class="nav-sidebar__link-level-2 nav-sidebar__link-level-2--active">Музей истории города Советска</a></li>
+								<li class="nav-sidebar__item-level-2">
+									<a href="#" class="nav-sidebar__link-level-2">«Тильзит-театр»</a>
+								</li>
+								<li class="nav-sidebar__item-level-2">
+									<a href="#" class="nav-sidebar__link-level-2">ЦКД «Парус»</a>
+								</li>
+								<li class="nav-sidebar__item-level-2">
+									<a href="#" class="nav-sidebar__link-level-2">ДК ЦБЗ</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-sidebar__item">
+							<a class="nav-sidebar__link" href="#">Культура</a>
+						</li>
+						<li class="nav-sidebar__item">
+							<a class="nav-sidebar__link" href="#">Спорт</a>
+						</li>
+						<li class="nav-sidebar__item">
+							<a class="nav-sidebar__link" href="#">Международные связи</a>
+						</li>
+						<li class="nav-sidebar__item">
+							<a class="nav-sidebar__link" href="#">Туризм</a>
+						</li>
+						<li class="nav-sidebar__item">
+							<a class="nav-sidebar__link" href="#">Образование</a>
+						</li>
+						<li class="nav-sidebar__item">
+							<a class="nav-sidebar__link" href="#">Здравоохранение</a>
+						</li>
+					</ul>
+			</div>
+
+			<div class="news-sidebar news-sidebar--section">
+				<span class="news-sidebar__title">Важные новости</span>
+				<div class="news-item news-item--pr">
+					<div class="news-item__category-block">
+						<span class="news-item__category">Общество</span>
+					</div>
+					<div class="news-item__img">
+						<img src="images/bridge.jpg" alt="">
+						<div class="news-item__img-overlay">
+							<date class="news-item__date">01 декабря  2018</date>
+							<a class="news-item__link">Подробнее</a>
+						</div>
+					</div>
+					<div class="news-item__title">Как прошел концерт</div>
+					<div class="news-item__excerpt">Минтруд предложил изменить состав потребительской корзины</div>
+				</div>
+				<div class="news-item">
+					<div class="news-item__category-block">
+						<span class="news-item__category">Общество</span>
+					</div>
+					<div class="news-item__img">
+						<img src="images/circle.jpg" alt="">
+						<div class="news-item__img-overlay">
+							<date class="news-item__date">01 декабря  2018</date>
+							<a class="news-item__link">Подробнее</a>
+						</div>
+					</div>
+					<div class="news-item__title">Как прошёл концерт Pompe в рамках второй части </div>
+					<div class="news-item__excerpt">Минтруд предложил изменить состав</div>
+				</div>
+				<button type="button" class="button button--news">Читать все новости</button>
+			</div>
+			<div class="widgets">
+				<div class="informer-currency">
+					<!-- Gismeteo informer START -->
+					<link rel="stylesheet" type="text/css" href="https://nst1.gismeteo.ru/assets/flat-ui/legacy/css/informer.min.css">
+					    <div id="gsInformerID-5i3QgG6I4PU7q6" class="gsInformer" style="width:292px;height:117px">
+					        <div class="gsIContent">
+					            <div id="cityLink">
+					                                    <a href="https://www.gismeteo.ru/weather-sovetsk-4200/" target="_blank">Погода в Советске</a>
+					            </div>
+					            <div class="gsLinks">
+					                <table>
+					                    <tr>
+					                        <td>
+					                            <div class="leftCol">
+					                                <a href="https://www.gismeteo.ru/" target="_blank">
+					                                    <img alt="Gismeteo" title="Gismeteo" src="https://nst1.gismeteo.ru/assets/flat-ui/img/logo-mini2.png" align="middle" border="0" />
+					                                    <span>Gismeteo</span>
+					                                </a>
+					                            </div>
+					                            <div class="rightCol">
+					                                <a href="https://www.gismeteo.ru/weather-sovetsk-4200/2-weeks/" target="_blank">Прогноз на 2 недели</a>
+					                            </div>
+					                        </td>
+					                        </tr>
+					                                    </table>
+					            </div>
+					        </div>
+					    </div>
+					<script async src="https://www.gismeteo.ru/api/informer/getinformer/?hash=5i3QgG6I4PU7q6" type="text/javascript"></script>
+					<!-- Gismeteo informer END -->				
+					<div class="currency">
+						<link rel="stylesheet" type="text/css" href="https://fortrader.org/informers/css?id=21297"><div class='FTinformersWrapper FTf7cfedd16950d4cac567b73c79d6e1c0 FT949533378'><script>document.querySelector(".FTf7cfedd16950d4cac567b73c79d6e1c0.FT949533378").style.opacity=0;</script><div class="informer_box informer_box_example clearfix alignCenter "><div class="inlineBlock"><table class="informer_table white  wwwhite"><tbody><tr class="col1"><th>Валюта</th><th>RUB</th></tr><tr class="col2 trClass " data-symbol="Доллар США" data-id="2"><td class="amount_big bigFlag"><span class="style5ImgWrap"><img src="https://files.fortrader.org/service_uploads/country/flags/shiny/48/US.png" alt=""></span><a class="symbolContainer" target="_blank" title="Доллар США" href="https://fortrader.org/currencyrates/usd">USD</a></td><td class="changeVal arrow" data-column="todayCourse"></td></tr><tr class="col3 trClass " data-symbol="Евро" data-id="21"><td class="amount_big bigFlag"><span class="style5ImgWrap"><img src="https://files.fortrader.org/service_uploads/country/flags/shiny/48/EU.png" alt=""></span><a class="symbolContainer" target="_blank" title="Евро" href="https://fortrader.org/currencyrates/eur">EUR</a></td><td class="changeVal arrow" data-column="todayCourse"></td></tr><tr class="col-data"><td colspan="2"><time class='ftDateTime' datetime="2018-01-23MSK14:29"><span class='ftDateTimeStr'>---</span> мск </time></td></tr></tbody></table></div></div></div><script async src="https://fortrader.org/informers/js?id=21297&m=949533378" type="text/javascript"></script>					
+					</div>
+				</div>
+				<div class="informer-vk">
+					<script type="text/javascript" src="//vk.com/js/api/openapi.js?151"></script>
+
+					<!-- VK Widget -->
+					<div id="vk_groups"></div>
+					<script type="text/javascript">
+					VK.Widgets.Group("vk_groups", {mode: 3, width: 'auto'}, 20003922);
+					</script>
+				</div>
+				<div class="informer-fb">
+					<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ffacebook&tabs&width=292&height=180&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="292" height="180" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+				</div>
+			</div>
+		</div>
+		<div class="base base--840">
+			<div class="category">
+				<h1 class="category__title">Заголовок страницы (пр. Культура)</h1>
+				<div class="category__descr">
+					<p>
+						Приступая к доказательству следует безапелляционно заявить, что геодезическая линия стремительно позиционирует постулат, как и предполагалось. Линейное уравнение решительно развивает аксиоматичный разрыв функции, что и требовалось доказать. Огибающая семейства прямых положительна. Тройной интеграл, конечно, притягивает разрыв функции. Тем не менее, первая производная стабилизирует многомерный степенной ряд, при этом, вместо 13 можно взять любую другую константу.
+					</p>
+				</div>
+			</div>
+			<div class="article-preview">
+				<div class="article-preview__title">Музей истории города Советска</div>
+				<div class="article-preview__descr">
+					<p>Линейное уравнение решительно развивает аксиоматичный разрыв функции, что и требовалось доказать. Огибающая семейства прямых положительна. Тройной интеграл, конечно, притягивает разрыв функции. Тем не менее, первая производная стабилизирует многомерный степенной ряд.</p>
+				</div>
+				<ul class="article-preview__gal-list">
+					<li class="article-preview__gal-item">
+						<a href="" class="article-preview__gal-link">
+							<img src="images/article-preview--big.jpg" alt="">
+						</a>
+					</li>
+					<li class="article-preview__gal-item">
+						<a href="" class="article-preview__gal-link">
+							<img src="images/article-preview.jpg" alt="">
+						</a>
+					</li>
+					<li class="article-preview__gal-item">
+						<a href="" class="article-preview__gal-link">
+							<img src="images/article-preview1.jpg" alt="">
+						</a>
+					</li>
+					<li class="article-preview__gal-item">
+						<a href="" class="article-preview__gal-link">
+							<img src="images/article-preview2.jpg" alt="">
+						</a>
+					</li>
+					<li class="article-preview__gal-item">
+						<a href="" class="article-preview__gal-link">
+							<img src="images/article-preview3.jpg" alt="">
+						</a>
+					</li>
+				</ul>
+				<button class="button button--article-preview">Подробнее</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="footer">
+		<div class="container">
+			<nav class="footer__nav">
+				<ul class="footer__nav-list">
+					<li class="footer__nav-item">
+						<a class="footer__nav-link">История города</a>
+					</li>
+					<li class="footer__nav-item">
+						<a class="footer__nav-link">Культура</a>
+					</li>
+					<li class="footer__nav-item">
+						<a class="footer__nav-link">Спорт</a>
+					</li>
+					<li class="footer__nav-item">
+						<a class="footer__nav-link">Муждународные связи</a>
+					</li>
+					<li class="footer__nav-item">
+						<a class="footer__nav-link">Туризм</a>
+					</li>
+					<li class="footer__nav-item">
+						<a class="footer__nav-link">Образование</a>
+					</li>
+					<li class="footer__nav-item">
+						<a class="footer__nav-link">Здравоохранение</a>
+					</li>
+					<li class="footer__nav-item">
+						<a class="footer__nav-link">Происшествия</a>
+					</li>
+					<li class="footer__nav-item">
+						<a class="footer__nav-link">Общество</a>
+					</li>
+					<li class="footer__nav-item">
+						<a class="footer__nav-link">Культура</a>
+					</li>
+					<li class="footer__nav-item">
+						<a class="footer__nav-link">На правах рекламы</a>
+					</li>
+					<li class="footer__nav-item">
+						<a class="footer__nav-link">Народная новость</a>
+					</li>
+					<li class="footer__nav-item">
+						<a class="footer__nav-link">Спорт</a>
+					</li>
+					<li class="footer__nav-item">
+						<a class="footer__nav-link">Союз промышленников и предпринимателей СГО</a>
+					</li>
+					<li class="footer__nav-item">
+						<a class="footer__nav-link">Видеоблог "Тильзит-Инфо"</a>
+					</li>
+					<li class="footer__nav-item">
+						<a class="footer__nav-link">Фотоальбом</a>
+					</li>
+					<li class="footer__nav-item">
+						<a class="footer__nav-link">Видеокамера на границе</a>
+					</li>
+					<li class="footer__nav-item">
+						<a class="footer__nav-link">Автовокзалы</a>
+					</li>
+					<li class="footer__nav-item">
+						<a class="footer__nav-link">Ж/Д вокзалы</a>
+					</li>
+					<li class="footer__nav-item">
+						<a class="footer__nav-link">Такси "Балтика"</a>
+					</li>
+					<li class="footer__nav-item">
+						<a class="footer__nav-link">Контактная информация</a>
+					</li>
+				</ul>
+			</nav>
+				
+			<div class="footer__info">
+				<button class="button button--contacts-footer">Написать нам</button>
+				<div class="footer__social-block">
+					<span class="footer__social-text">Мы в социальных сетях:</span>
+					<a href="" target="_blank" class="footer__social-link footer__social-link--vk"></a>
+					<a href="" target="_blank" class="footer__social-link footer__social-link--fb"></a>
+				</div>
+				<div class="footer__contacts">
+					<span class="footer__contacts-text">Контакты редакции:</span>
+					<a href="#" class="footer__phone">+7 (4012) 123-123</a>
+					<a href="" class="footer__email">tilzit-info@mail.ru</a>
+					<span class="footer__adress">г. Советск, ул. Чапаева, 2</span>
+				</div>
+			</div>
+			<div class="footer__bottom">
+				<a href="#" class="footer__logo">
+					<img src="images/logo--transparent.png" alt="">
+				</a>
+				<div class="footer__copyright">
+					Все материалы данного сайта являются объектами авторского права (в том числе дизайн). Запрещается копирование, распространение (в том числе путем копирования на другие сайты и ресурсы в Интернете) или любое иное использование информации и объектов без предварительного согласия правообладателя.
+				</div>
+				<a href="" target="_blank" rel="nofollow" class="footer__developer">
+					<span class="footer__developer-logo">
+						<img src="images/mts-logo.png" alt="">
+					</span>
+					<span class="footer__developer__text">Сделано в веб-студии “МультиСайт”<br> Разработка и продвижение сайтов</span>
+				</a>
+			</div>
+		</div>
+	</div>
+</body>
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/user.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script>
+	$(document).ready(function(){
+		$('.slider-index-top').slick({
+			prevArrow: "<button class=\"slick-arrow slick-arrow--prev\"></button>",
+			nextArrow: "<button class=\"slick-arrow slick-arrow--next\"></button>",
+			autoplay: true,
+			autoplaySpeed: 3000,
+			dots: true,
+			dotsClass: "slick-dots-custom",
+		});
+
+		$('.slider-big__main').slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			autoplay: true,
+			autoplaySpeed: 3000,
+			infinite: false,
+			prevArrow: "<button class=\"slick-arrow slick-arrow--prev\"></button>",
+			nextArrow: "<button class=\"slick-arrow slick-arrow--next\"></button>",
+			asNavFor: '.slider-big__nav'
+		});
+
+		$('.slider-big__nav').slick({
+			asNavFor: '.slider-big__main',
+			arrows: false,
+			slidesToShow: 5,
+			infinite: false,
+			slidesToScroll: 1,
+			focusOnSelect: true,
+		});
+	});
+
+	(function () {
+	    if ($('#ftr-map').length) {
+	        jQuery.getScript("http://api-maps.yandex.ru/2.0/?load=package.full&amp;lang=ru-RU", function (){
+	            var myMap;
+	            function init(){
+	                myMap = new ymaps.Map("ftr-map", {
+	                    center: [55.090799, 21.854223],
+	                    zoom: 17
+	                });
+
+	             MyBalloonLayout = ymaps.templateLayoutFactory.createClass(
+	            '<div class="popover">' +
+	                '<div class="arrow"></div>' +
+	                '<div class="popover-inner">' +
+	                '$[[options.contentLayout observeSize]]' +
+	                '</div>' +
+	                '</div>', {
+	                /**
+	                 * Строит экземпляр макета на основе шаблона и добавляет его в родительский HTML-элемент.
+	                 * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/layout.templateBased.Base.xml#build
+	                 * @function
+	                 * @name build
+	                 */
+	                build: function () {
+	                    this.constructor.superclass.build.call(this);
+	                    this._$element = $('.popover', this.getParentElement());
+	                    this.applyElementOffset();
+	                    this._$element.find('.close')
+	                        .on('click', $.proxy(this.onCloseClick, this));
+	                },
+	                /**
+	                 * Удаляет содержимое макета из DOM.
+	                 * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/layout.templateBased.Base.xml#clear
+	                 * @function
+	                 * @name clear
+	                 */
+	                clear: function () {
+	                    this._$element.find('.close')
+	                        .off('click');
+	                    this.constructor.superclass.clear.call(this);
+	                },
+	                /**
+	                 * Метод будет вызван системой шаблонов АПИ при изменении размеров вложенного макета.
+	                 * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/IBalloonLayout.xml#event-userclose
+	                 * @function
+	                 * @name onSublayoutSizeChange
+	                 */
+	                onSublayoutSizeChange: function () {
+	                    MyBalloonLayout.superclass.onSublayoutSizeChange.apply(this, arguments);
+	                    if(!this._isElement(this._$element)) {
+	                        return;
+	                    }
+	                    this.applyElementOffset();
+	                    this.events.fire('shapechange');
+	                },
+	                /**
+	                 * Сдвигаем балун, чтобы "хвостик" указывал на точку привязки.
+	                 * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/IBalloonLayout.xml#event-userclose
+	                 * @function
+	                 * @name applyElementOffset
+	                 */
+	                applyElementOffset: function () {
+	                    this._$element.css({
+	                        left: -(this._$element[0].offsetWidth / 2),
+	                        top: -(this._$element[0].offsetHeight + this._$element.find('.arrow')[0].offsetHeight + 62)
+	                    });
+	                },
+	                /**
+	                 * Закрывает балун при клике на крестик, кидая событие "userclose" на макете.
+	                 * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/IBalloonLayout.xml#event-userclose
+	                 * @function
+	                 * @name onCloseClick
+	                 */
+	                onCloseClick: function (e) {
+	                    e.preventDefault();
+	                    this.events.fire('userclose');
+	                },
+	                /**
+	                 * Используется для автопозиционирования (balloonAutoPan).
+	                 * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/ILayout.xml#getClientBounds
+	                 * @function
+	                 * @name getClientBounds
+	                 * @returns {Number[][]} Координаты левого верхнего и правого нижнего углов шаблона относительно точки привязки.
+	                 */
+	                getShape: function () {
+	                    if(!this._isElement(this._$element)) {
+	                        return MyBalloonLayout.superclass.getShape.call(this);
+	                    }
+	                    var position = this._$element.position();
+	                    return new ymaps.shape.Rectangle(new ymaps.geometry.pixel.Rectangle([
+	                        [position.left, position.top], [
+	                            position.left + this._$element[0].offsetWidth,
+	                            position.top + this._$element[0].offsetHeight + this._$element.find('.arrow')[0].offsetHeight
+	                        ]
+	                    ]));
+	                },
+	                /**
+	                 * Проверяем наличие элемента (в ИЕ и Опере его еще может не быть).
+	                 * @function
+	                 * @private
+	                 * @name _isElement
+	                 * @param {jQuery} [element] Элемент.
+	                 * @returns {Boolean} Флаг наличия.
+	                 */
+	                _isElement: function (element) {
+	                    return element && element[0] && element.find('.arrow')[0];
+	                }
+	            });
+
+				   var MyBalloonContentLayout = ymaps.templateLayoutFactory.createClass(
+				   	'<div class="map__container">' + 
+				       '<div class="map__phone">$[properties.phone]</div>' +
+				       '<div class="map__email">$[properties.email]</div>' +
+				       '<div class="map__address">$[properties.address]</div>' +
+				    '</div>'   
+				   );
+
+	                var myPlacemark = new ymaps.Placemark([55.090799, 21.854223], {
+	                	phone: '+7 (4012) 123-123',
+	                	email: 'tilzit-info@mail.ru',
+	                    address: 'г. Советск, ул. Чапаева, 2',
+	                }, {
+	                	balloonContentLayout: MyBalloonContentLayout,
+	                	balloonLayout: MyBalloonLayout,
+	                    balloonShadow: false,
+	                    iconImageHref: '/images/map-baloon.png',
+	                    iconImageSize: [50, 78],
+	                    iconImageOffset: [-25, -78],
+	                    // hideIconOnBalloonOpen: false,
+	                });
+	                myMap.geoObjects.add(myPlacemark);
+	                myMap.controls.add('smallZoomControl');
+	            }
+	            ymaps.ready(init);
+	        });
+	    }
+	})();
+	</script>
+	
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = 'https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.11';
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+</html>

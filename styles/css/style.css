@@ -496,6 +496,9 @@ body {
 .base--860 {
   width: 860px;
 }
+.base--840 {
+  width: 840px;
+}
 .base--835 {
   width: 835px;
 }
@@ -923,9 +926,14 @@ a.weatherInformer22:hover {
   border-color: #1a2389;
 }
 .button--news {
+  width: 175px;
   display: block;
   margin: 0 auto;
+  margin-bottom: 15px;
   border-color: #273190;
+}
+.news-sidebar--section .button--news {
+  margin-top: 20px;
 }
 .button--slider-big {
   width: 205px;
@@ -1054,7 +1062,10 @@ a.weatherInformer22:hover {
   margin-top: 11px;
   padding-left: 12px;
   padding-right: 12px;
-  padding-bottom: 13px;
+}
+.news-sidebar--section {
+  margin-bottom: 30px;
+  padding-bottom: 10px;
 }
 .news-sidebar__title {
   position: relative;
@@ -1206,6 +1217,11 @@ a.weatherInformer22:hover {
   line-height: 15px;
   color: #8e8e8e;
 }
+.widgets {
+  margin-bottom: 40px;
+  padding-right: 15px;
+  border-right: 1px solid #e0e0e0;
+}
 .banner {
   height: 110px;
   margin-bottom: 25px;
@@ -1262,8 +1278,8 @@ a.weatherInformer22:hover {
 .footer {
   padding-top: 25px;
   background-repeat: no-repeat;
-  background-position: center;
-  background-image: url(images/);
+  background-position: top center;
+  background-image: url(../../images/footer-background.jpg);
   background-color: #2d2b7b;
 }
 .footer__nav {
@@ -1485,7 +1501,7 @@ a.weatherInformer22:hover {
 }
 .breadcrumbs {
   margin-top: 5px;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 .breadcrumbs-link {
   position: relative;
@@ -1514,7 +1530,7 @@ a.weatherInformer22:hover {
   height: 6px;
 }
 .contacts__title {
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   font-weight: 500;
   font-size: 22px;
   line-height: 26px;
@@ -1567,12 +1583,24 @@ a.weatherInformer22:hover {
   left: -35px;
   width: 25px;
   height: 25px;
-  background-color: blue;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.contacts__type--address:before {
+  background-image: url(../../images/contacts-block--baloon.png);
+}
+.contacts__type--tel:before {
+  background-image: url(../../images/contacts-block--phone.png);
+}
+.contacts__type--email:before {
+  background-image: url(../../images/contacts-block--flag.png);
 }
 .contacts__value {
   display: block;
-  font-style: 15px;
+  text-decoration: none;
+  font-size: 15px;
   line-height: 22px;
+  color: #2a2a2a;
 }
 .contacts__wrapper {
   display: -webkit-box;
@@ -1596,4 +1624,158 @@ a.weatherInformer22:hover {
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
+}
+.nav-sidebar {
+  margin-bottom: 30px;
+}
+.nav-sidebar__list,
+.nav-sidebar__list-level-2 {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nav-sidebar__section-name {
+  position: relative;
+  display: block;
+  margin-bottom: 5px;
+  padding: 10px 35px 10px 10px;
+  border: 1px solid #e5c728;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 20px;
+  color: #242323;
+}
+.nav-sidebar__section-name:before {
+  position: absolute;
+  content: "";
+  right: 12px;
+  top: 10px;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #a8a7c8;
+}
+.nav-sidebar__section-name:after {
+  position: absolute;
+  content: "";
+  right: 19px;
+  top: 16px;
+  width: 4px;
+  height: 4px;
+  border: 1px solid #353380;
+  border-top-width: 0;
+  border-left-width: 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.nav-sidebar__item {
+  margin-bottom: 5px;
+}
+.nav-sidebar__link {
+  position: relative;
+  display: block;
+  padding: 10px 35px 10px 10px;
+  border: 1px solid #e0e1ef;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 20px;
+  color: #242323;
+}
+.nav-sidebar__link:before {
+  position: absolute;
+  content: "";
+  right: 12px;
+  top: 10px;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #a8a7c8;
+}
+.nav-sidebar__link:after {
+  position: absolute;
+  content: "";
+  right: 19px;
+  top: 16px;
+  width: 4px;
+  height: 4px;
+  border: 1px solid #353380;
+  border-top-width: 0;
+  border-left-width: 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.nav-sidebar__link--active {
+  color: #fff;
+  background-color: #242175;
+}
+.nav-sidebar__link--active:after {
+  border-color: #f0f0f6;
+}
+.nav-sidebar__link--active:before {
+  border-color: #7c7bad;
+}
+.nav-sidebar__list-level-2 {
+  border: 1px solid #f5f5f5;
+  padding: 0 6px;
+}
+.nav-sidebar__link-level-2 {
+  position: relative;
+  display: block;
+  padding: 10px 0 10px 25px;
+  text-decoration: none;
+  color: #242323;
+  font-size: 14px;
+  line-height: 18px;
+}
+.nav-sidebar__item-level-2:not(:nth-child(1)) {
+  border-top: 1px solid #ebebf3;
+}
+.nav-sidebar__link-level-2--active {
+  color: #2c297a;
+}
+.nav-sidebar__link-level-2:before {
+  position: absolute;
+  content: "";
+  left: 10px;
+  top: 16px;
+  width: 4px;
+  height: 4px;
+  border: 1px solid #3a3883;
+  border-top-width: 0;
+  border-left-width: 0;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.category__title {
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 500;
+}
+.category__descr {
+  font-size: 15px;
+  line-height: 20px;
+  border-bottom: 1px solid #d5d5d5;
+}
+.article-preview__gal-list {
+  list-style: none;
+  margin: 0;
+  margin: 0 -5px -5px;
+}
+.article-preview__gal-item:first-child {
+  width: 50%;
+}
+.article-preview__gal-item {
+  float: left;
+  width: 25%;
+  padding: 5px;
+}
+.article-preview__gal-link {
+  display: block;
+  overflow: hidden;
+}
+p {
+  font-size: 15px;
+  line-height: 20px;
+  margin: 0;
+  margin-bottom: 25px;
 }
