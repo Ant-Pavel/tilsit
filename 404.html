@@ -4,9 +4,10 @@
 	<meta charset="UTF-8">
 	<title>Тильзит - Главная страница</title>
 	<meta name="robots" content="noindex, nofollow"/>
-	<link rel="stylesheet" href="styles/css/style.css">
 	<link rel="stylesheet" href="styles/css/slick.css">
 	<link rel="stylesheet" href="styles/css/slick-theme.css">
+	<link rel="stylesheet" href="styles/css/style.css">
+	<link rel="stylesheet" href="styles/css/jquery.fancybox.min.css">
 </head>
 <body>
 	<div class="container">
@@ -28,10 +29,10 @@
 				</div>
 				<div class="page-header__social">
 					<span class="page-header__social-text">Подписывайтесь</span>
-					<a href="#" class="page-header__social-link page-header__social-link--vk"></a>
-					<a href="#" class="page-header__social-link page-header__social-link--fb"></a>
+					<a href="#" target="_blank" class="page-header__social-link page-header__social-link--vk"></a>
+					<a href="#" target="_blank" class="page-header__social-link page-header__social-link--fb"></a>
 				</div>
-				<button type="button" class="button button--page-header">Прислать новость</button>
+				<a data-fancybox data-src="#feedback" type="button" class="button button--page-header">Прислать новость</a>
 				<button class="page-header__nav-toggler"></button>
 				<nav class="page-header__nav">
 					<ul class="page-header__nav-list">
@@ -40,6 +41,12 @@
 						<li class="page-header__nav-item"><a href="#">Экономика</a></li>
 						<li class="page-header__nav-item"><a href="#">Галерея</a></li>
 						<li class="page-header__nav-item"><a href="#">Транспорт</a></li>
+						<li class="page-header__nav-item"><a href="contacts.html">Контакты</a></li>
+						<li class="page-header__nav-item"><a href="category.html">Раздел</a></li>
+						<li class="page-header__nav-item"><a href="news.html">Последние новости</a></li>
+						<li class="page-header__nav-item"><a href="gallery.html">Галерея</a></li>
+						<li class="page-header__nav-item"><a href="content.html">Контентная страница</a></li>
+						<li class="page-header__nav-item"><a href="search-results.html">Результаты поиска</a></li>
 					</ul>
 				</nav>
 		</header>
@@ -49,50 +56,13 @@
 			<span class="breadcrumbs-link">Главная</span>
 			<span class="breadcrumbs-link breadcrumbs-link--active">Раздел</span>
 		</div>
-
-		<div class="page-title">Контакты</div>
-		<div class="contacts">
-			<div class="contacts__subtext">Наше издетельство расположено</div>
-			<div class="contacts__blocks">
-				<div class="contacts__block">
-					<span class="contacts__type contacts__type--address">Адрес:</span>
-					<span class="contacts__value">г. Советск, ул. Чапаева, 2</span>
-				</div>
-				<div class="contacts__block contacts__block--tel">
-					<span class="contacts__type contacts__type--tel">Телефон:</span>
-					<a href="tel:+74012123123" class="contacts__value">+7 (4012) 123-123</a>
-					<a href="tel:+74012123123" class="contacts__value">+7 (4012) 123-123</a>
-				</div>
-				<div class="contacts__block">
-					<span class="contacts__type contacts__type--email">Почта:</span>
-					<a href="mailto:tilzit-info@mail.com" class="contacts__value">tilzit-info@mail.com</a>
-				</div>
-			</div>
-			<div class="contacts__wrapper">
-				<div class="contacts__form">
-					<form action="" class="contacts-form">
-						<div class="contacts-form__title">Напишите нам</div>
-							<label class="field-text" for="">
-								<input type="text" class="field-text__input" name="" placeholder="Ваше имя">
-							</label>							
-							<label class="field-text" for="">
-								<input type="text" class="field-text__input" name="" placeholder="Ваш телефон">
-							</label>						
-							<label class="field-textarea">
-								<textarea class="field-textarea__input" name="" placeholder="Текст вопроса"></textarea>
-							</label>
-							<button class="button button--contacts">Отправить</button>
-					</form>
-				</div>
-				<div class="contacts__map" id="contacts__map">
-					
-				</div>
+		<div class="page-404">
+			<div class="page-404__text">
+				Страница не найдена
+				<a class="page-404__link">Вернуться на главную страницу</a>
 			</div>
 		</div>
-
-			
 	</div>
-
 		<div class="footer">
 			<div class="container">
 				<nav class="footer__nav">
@@ -172,7 +142,7 @@
 					</div>
 					<div class="footer__contacts">
 						<span class="footer__contacts-text">Контакты редакции:</span>
-						<a href="" class="footer__phone">+7 (4012) 123-123</a>
+						<a href="#" class="footer__phone">+7 (4012) 123-123</a>
 						<a href="" class="footer__email">tilzit-info@mail.ru</a>
 						<span class="footer__adress">г. Советск, ул. Чапаева, 2</span>
 					</div>
@@ -186,17 +156,42 @@
 					</div>
 					<a href="" target="_blank" rel="nofollow" class="footer__developer">
 						<span class="footer__developer-logo">
-							<img src="images/mtarget="_blank" ts-logo.png" alt="">
+							<img src="images/mts-logo.png" alt="">
 						</span>
 						<span class="footer__developer__text">Сделано в веб-студии “МультиСайт”<br> Разработка и продвижение сайтов</span>
 					</a>
 				</div>
 			</div>
 		</div>
+
+		<div id="feedback" style="display: none;" class="feedback-pop-up">
+			<form action="" class="feedback-form">
+				<div class="feedback-form__text">Напишите нам и мы свяжемся с Вами в ближайшее время</div>
+				<label class="field-text field-text--feedback" for="">
+					<input type="text" class="field-text__input" name="" placeholder="Имя">
+				</label>
+				<label class="field-text field-text--feedback" for="">
+					<input type="text" class="field-text__input" name="" placeholder="Телефон">
+				</label>
+				<label class="field-text field-text--feedback" for="">
+					<input type="text" class="field-text__input" name="" placeholder="E-mail">
+				</label>
+				<label class="field-textarea field-textarea--feedback" for="">
+					<textarea type="text" class="field-textarea__input" name="" placeholder="Комментарий"></textarea>
+				</label>
+				<label class="field-checkbox" for="">
+					<input type="checkbox" class="field-checkbox__input" id="" required>
+					<span class="field-checkbox__input-fake"></span>
+					Я согласен на обработку персональных данных и ознакомлен с политикой конфиденциальности
+				</label>
+				<button class="button button--feedback">Отправить</button>
+			</form>
+		</div>
 </body>
 	<script src="js/jquery-3.3.1.min.js"></script>
-	<script src="js/user.js"></script>
 	<script src="js/slick.min.js"></script>
+	<script src="js/jquery.fancybox.min.js"></script>
+	<script src="js/user.js"></script>
 
 	<div id="fb-root"></div>
 	<script>(function(d, s, id) {

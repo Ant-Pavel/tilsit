@@ -70,7 +70,7 @@
 		});
 
 
-	$(document).ready(function(){
+	$(document).ready(function() {
 		$('.slider-index-top').slick({
 			prevArrow: "<button class=\"slick-arrow slick-arrow--prev\"></button>",
 			nextArrow: "<button class=\"slick-arrow slick-arrow--next\"></button>",
@@ -99,7 +99,10 @@
 			slidesToScroll: 1,
 			focusOnSelect: true,
 		});
-	});
+
+// ***********************
+// Карта на главной странице  START
+// ************************
 
 	(function () {
 	    if ($('#ftr-map').length) {
@@ -111,7 +114,7 @@
 	                    zoom: 17
 	                });
 
-	             MyBalloonLayout = ymaps.templateLayoutFactory.createClass(
+	             var MyBalloonLayout = ymaps.templateLayoutFactory.createClass(
 	            '<div class="popover">' +
 	                '<div class="arrow"></div>' +
 	                '<div class="popover-inner">' +
@@ -226,7 +229,7 @@
 	                	balloonContentLayout: MyBalloonContentLayout,
 	                	balloonLayout: MyBalloonLayout,
 	                    balloonShadow: false,
-	                    iconImageHref: '/images/map-baloon.png',
+	                    iconImageHref: '../images/map-baloon.png',
 	                    iconImageSize: [50, 78],
 	                    iconImageOffset: [-25, -78],
 	                    // hideIconOnBalloonOpen: false,
@@ -238,7 +241,155 @@
 	        });
 	    }
 	})();
+// ***********************
+// Карта на главной странице  END
+// ************************
 
+// ***********************
+// Карта на странице контакты  START
+// ************************
+	(function () {
+	    if ($('#contacts__map').length) {
+	        jQuery.getScript("http://api-maps.yandex.ru/2.0/?load=package.full&amp;lang=ru-RU", function (){
+	            var myMap;
+	            function init(){
+	                myMap = new ymaps.Map("contacts__map", {
+	                    center: [55.090799, 21.854223],
+	                    zoom: 17
+	                });
+
+	             var MyBalloonLayout = ymaps.templateLayoutFactory.createClass(
+	            '<div class="popover">' +
+	                '<div class="arrow"></div>' +
+	                '<div class="popover-inner">' +
+	                '$[[options.contentLayout observeSize]]' +
+	                '</div>' +
+	                '</div>', {
+	                /**
+	                 * Строит экземпляр макета на основе шаблона и добавляет его в родительский HTML-элемент.
+	                 * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/layout.templateBased.Base.xml#build
+	                 * @function
+	                 * @name build
+	                 */
+	                build: function () {
+	                    this.constructor.superclass.build.call(this);
+	                    this._$element = $('.popover', this.getParentElement());
+	                    this.applyElementOffset();
+	                    this._$element.find('.close')
+	                        .on('click', $.proxy(this.onCloseClick, this));
+	                },
+	                /**
+	                 * Удаляет содержимое макета из DOM.
+	                 * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/layout.templateBased.Base.xml#clear
+	                 * @function
+	                 * @name clear
+	                 */
+	                clear: function () {
+	                    this._$element.find('.close')
+	                        .off('click');
+	                    this.constructor.superclass.clear.call(this);
+	                },
+	                /**
+	                 * Метод будет вызван системой шаблонов АПИ при изменении размеров вложенного макета.
+	                 * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/IBalloonLayout.xml#event-userclose
+	                 * @function
+	                 * @name onSublayoutSizeChange
+	                 */
+	                onSublayoutSizeChange: function () {
+	                    MyBalloonLayout.superclass.onSublayoutSizeChange.apply(this, arguments);
+	                    if(!this._isElement(this._$element)) {
+	                        return;
+	                    }
+	                    this.applyElementOffset();
+	                    this.events.fire('shapechange');
+	                },
+	                /**
+	                 * Сдвигаем балун, чтобы "хвостик" указывал на точку привязки.
+	                 * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/IBalloonLayout.xml#event-userclose
+	                 * @function
+	                 * @name applyElementOffset
+	                 */
+	                applyElementOffset: function () {
+	                    this._$element.css({
+	                        left: -(this._$element[0].offsetWidth / 2),
+	                        top: -(this._$element[0].offsetHeight + this._$element.find('.arrow')[0].offsetHeight + 62)
+	                    });
+	                },
+	                /**
+	                 * Закрывает балун при клике на крестик, кидая событие "userclose" на макете.
+	                 * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/IBalloonLayout.xml#event-userclose
+	                 * @function
+	                 * @name onCloseClick
+	                 */
+	                onCloseClick: function (e) {
+	                    e.preventDefault();
+	                    this.events.fire('userclose');
+	                },
+	                /**
+	                 * Используется для автопозиционирования (balloonAutoPan).
+	                 * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/ILayout.xml#getClientBounds
+	                 * @function
+	                 * @name getClientBounds
+	                 * @returns {Number[][]} Координаты левого верхнего и правого нижнего углов шаблона относительно точки привязки.
+	                 */
+	                getShape: function () {
+	                    if(!this._isElement(this._$element)) {
+	                        return MyBalloonLayout.superclass.getShape.call(this);
+	                    }
+	                    var position = this._$element.position();
+	                    return new ymaps.shape.Rectangle(new ymaps.geometry.pixel.Rectangle([
+	                        [position.left, position.top], [
+	                            position.left + this._$element[0].offsetWidth,
+	                            position.top + this._$element[0].offsetHeight + this._$element.find('.arrow')[0].offsetHeight
+	                        ]
+	                    ]));
+	                },
+	                /**
+	                 * Проверяем наличие элемента (в ИЕ и Опере его еще может не быть).
+	                 * @function
+	                 * @private
+	                 * @name _isElement
+	                 * @param {jQuery} [element] Элемент.
+	                 * @returns {Boolean} Флаг наличия.
+	                 */
+	                _isElement: function (element) {
+	                    return element && element[0] && element.find('.arrow')[0];
+	                }
+	            });
+
+				   var MyBalloonContentLayout = ymaps.templateLayoutFactory.createClass(
+				   	'<div class="map__container map__container--contacts">' + 
+				       '<div class="map__phone">$[properties.phone]</div>' +
+				       '<div class="map__email">$[properties.email]</div>' +
+				       '<div class="map__address">$[properties.address]</div>' +
+				    '</div>'   
+				   );
+
+	                var myPlacemark = new ymaps.Placemark([55.090799, 21.854223], {
+	                	phone: '+7 (4012) 123-123',
+	                	email: 'tilzit-info@mail.ru',
+	                    address: 'г. Советск, ул. Чапаева, 2',
+	                }, {
+	                	balloonContentLayout: MyBalloonContentLayout,
+	                	balloonLayout: MyBalloonLayout,
+	                    balloonShadow: false,
+	                    iconImageHref: '../images/map-contacts-baloon.png',
+	                    iconImageSize: [32, 43],
+	                    iconImageOffset: [-12, -43],
+	                    // hideIconOnBalloonOpen: false,
+	                });
+	                myMap.geoObjects.add(myPlacemark);
+	                myMap.controls.add('smallZoomControl');
+	            }
+	            ymaps.ready(init);
+	        });
+	    }
+	})();
+	});
+
+// ***********************
+// Карта на странице контакты  END
+// ************************
 
 $(document).ready(function() {
     const $menu_item = $('.nav-sidebar__item--has-children');
@@ -258,21 +409,33 @@ $(document).ready(function() {
 	    	$sub_menu.slideUp();
 		    $(this).removeClass('active');	
 	    }
-    });
+
 
 //************ 
 // Fancybox для картинок из контента
 // **********
-const fancy_link = $(".content a");
-    fancy_link.each(function() {
-    	var a = $(this).attr('href');
-    	if ((a.indexOf('jpg') != -1) || (a.indexOf('jpeg') != -1) || (a.indexOf('png') != -1)) {
-    		$(this).fancybox({});
-    	}
-    })
+	const fancy_link = $(".content a");
+	    fancy_link.each(function() {
+	    	var a = $(this).attr('href');
+	    	if ((a.indexOf('jpg') != -1) || (a.indexOf('jpeg') != -1) || (a.indexOf('png') != -1)) {
+	    		$(this).fancybox({});
+	    	}
+	    })
+	});
+
+	//************ 
+	// Чекбокс в Feedback
+	// **********
+	$(".field-checkbox").each(function() {
+	$(this).click(function() {
+	    if ( $(this).find("input").prop('checked') === false) {
+	        $(this).find(".field-checkbox__input-fake").addClass("field-checkbox__input-fake--checked");
+	        $(this).find("input").prop('checked', true);
+	    } else {
+	        $(this).find(".field-checkbox__input-fake").removeClass("field-checkbox__input-fake--checked");
+	        $(this).find("input").prop('checked', false);
+	    }
+	});
+	});
+
 });
-
-
-
-
-

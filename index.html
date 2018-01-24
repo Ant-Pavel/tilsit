@@ -4,9 +4,10 @@
 	<meta charset="UTF-8">
 	<title>Тильзит - Главная страница</title>
 	<meta name="robots" content="noindex, nofollow"/>
-	<link rel="stylesheet" href="styles/css/style.css">
 	<link rel="stylesheet" href="styles/css/slick.css">
 	<link rel="stylesheet" href="styles/css/slick-theme.css">
+	<link rel="stylesheet" href="styles/css/style.css">
+	<link rel="stylesheet" href="styles/css/jquery.fancybox.min.css">
 </head>
 <body>
 	<div class="container">
@@ -31,7 +32,7 @@
 					<a href="#" target="_blank" class="page-header__social-link page-header__social-link--vk"></a>
 					<a href="#" target="_blank" class="page-header__social-link page-header__social-link--fb"></a>
 				</div>
-				<button type="button" class="button button--page-header">Прислать новость</button>
+				<a data-fancybox data-src="#feedback" type="button" class="button button--page-header">Прислать новость</a>
 				<button class="page-header__nav-toggler"></button>
 				<nav class="page-header__nav">
 					<ul class="page-header__nav-list">
@@ -45,6 +46,8 @@
 						<li class="page-header__nav-item"><a href="news.html">Последние новости</a></li>
 						<li class="page-header__nav-item"><a href="gallery.html">Галерея</a></li>
 						<li class="page-header__nav-item"><a href="content.html">Контентная страница</a></li>
+						<li class="page-header__nav-item"><a href="search-results.html">Результаты поиска</a></li>
+						<li class="page-header__nav-item"><a href="404.html">404</a></li>
 					</ul>
 				</nav>
 		</header>
@@ -463,181 +466,36 @@
 				</div>
 			</div>
 		</div>
+
+		<div id="feedback" style="display: none;" class="feedback-pop-up">
+			<form action="" class="feedback-form">
+				<div class="feedback-form__text">Напишите нам и мы свяжемся с Вами в ближайшее время</div>
+				<label class="field-text field-text--feedback" for="">
+					<input type="text" class="field-text__input" name="" placeholder="Имя">
+				</label>
+				<label class="field-text field-text--feedback" for="">
+					<input type="text" class="field-text__input" name="" placeholder="Телефон">
+				</label>
+				<label class="field-text field-text--feedback" for="">
+					<input type="text" class="field-text__input" name="" placeholder="E-mail">
+				</label>
+				<label class="field-textarea field-textarea--feedback" for="">
+					<textarea type="text" class="field-textarea__input" name="" placeholder="Комментарий"></textarea>
+				</label>
+				<label class="field-checkbox" for="">
+					<input type="checkbox" class="field-checkbox__input" id="" required>
+					<span class="field-checkbox__input-fake"></span>
+					Я согласен на обработку персональных данных и ознакомлен с политикой конфиденциальности
+				</label>
+				<button class="button button--feedback">Отправить</button>
+			</form>
+		</div>
 </body>
 	<script src="js/jquery-3.3.1.min.js"></script>
-	<script src="js/user.js"></script>
 	<script src="js/slick.min.js"></script>
-	<script>
-	$(document).ready(function(){
-		$('.slider-index-top').slick({
-			prevArrow: "<button class=\"slick-arrow slick-arrow--prev\"></button>",
-			nextArrow: "<button class=\"slick-arrow slick-arrow--next\"></button>",
-			autoplay: true,
-			autoplaySpeed: 3000,
-			dots: true,
-			dotsClass: "slick-dots-custom",
-		});
+	<script src="js/jquery.fancybox.min.js"></script>
+	<script src="js/user.js"></script>
 
-		$('.slider-big__main').slick({
-			slidesToShow: 1,
-			slidesToScroll: 1,
-			autoplay: true,
-			autoplaySpeed: 3000,
-			infinite: false,
-			prevArrow: "<button class=\"slick-arrow slick-arrow--prev\"></button>",
-			nextArrow: "<button class=\"slick-arrow slick-arrow--next\"></button>",
-			asNavFor: '.slider-big__nav'
-		});
-
-		$('.slider-big__nav').slick({
-			asNavFor: '.slider-big__main',
-			arrows: false,
-			slidesToShow: 5,
-			infinite: false,
-			slidesToScroll: 1,
-			focusOnSelect: true,
-		});
-	});
-
-	(function () {
-	    if ($('#ftr-map').length) {
-	        jQuery.getScript("http://api-maps.yandex.ru/2.0/?load=package.full&amp;lang=ru-RU", function (){
-	            var myMap;
-	            function init(){
-	                myMap = new ymaps.Map("ftr-map", {
-	                    center: [55.090799, 21.854223],
-	                    zoom: 17
-	                });
-
-	             MyBalloonLayout = ymaps.templateLayoutFactory.createClass(
-	            '<div class="popover">' +
-	                '<div class="arrow"></div>' +
-	                '<div class="popover-inner">' +
-	                '$[[options.contentLayout observeSize]]' +
-	                '</div>' +
-	                '</div>', {
-	                /**
-	                 * Строит экземпляр макета на основе шаблона и добавляет его в родительский HTML-элемент.
-	                 * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/layout.templateBased.Base.xml#build
-	                 * @function
-	                 * @name build
-	                 */
-	                build: function () {
-	                    this.constructor.superclass.build.call(this);
-	                    this._$element = $('.popover', this.getParentElement());
-	                    this.applyElementOffset();
-	                    this._$element.find('.close')
-	                        .on('click', $.proxy(this.onCloseClick, this));
-	                },
-	                /**
-	                 * Удаляет содержимое макета из DOM.
-	                 * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/layout.templateBased.Base.xml#clear
-	                 * @function
-	                 * @name clear
-	                 */
-	                clear: function () {
-	                    this._$element.find('.close')
-	                        .off('click');
-	                    this.constructor.superclass.clear.call(this);
-	                },
-	                /**
-	                 * Метод будет вызван системой шаблонов АПИ при изменении размеров вложенного макета.
-	                 * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/IBalloonLayout.xml#event-userclose
-	                 * @function
-	                 * @name onSublayoutSizeChange
-	                 */
-	                onSublayoutSizeChange: function () {
-	                    MyBalloonLayout.superclass.onSublayoutSizeChange.apply(this, arguments);
-	                    if(!this._isElement(this._$element)) {
-	                        return;
-	                    }
-	                    this.applyElementOffset();
-	                    this.events.fire('shapechange');
-	                },
-	                /**
-	                 * Сдвигаем балун, чтобы "хвостик" указывал на точку привязки.
-	                 * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/IBalloonLayout.xml#event-userclose
-	                 * @function
-	                 * @name applyElementOffset
-	                 */
-	                applyElementOffset: function () {
-	                    this._$element.css({
-	                        left: -(this._$element[0].offsetWidth / 2),
-	                        top: -(this._$element[0].offsetHeight + this._$element.find('.arrow')[0].offsetHeight + 62)
-	                    });
-	                },
-	                /**
-	                 * Закрывает балун при клике на крестик, кидая событие "userclose" на макете.
-	                 * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/IBalloonLayout.xml#event-userclose
-	                 * @function
-	                 * @name onCloseClick
-	                 */
-	                onCloseClick: function (e) {
-	                    e.preventDefault();
-	                    this.events.fire('userclose');
-	                },
-	                /**
-	                 * Используется для автопозиционирования (balloonAutoPan).
-	                 * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/ILayout.xml#getClientBounds
-	                 * @function
-	                 * @name getClientBounds
-	                 * @returns {Number[][]} Координаты левого верхнего и правого нижнего углов шаблона относительно точки привязки.
-	                 */
-	                getShape: function () {
-	                    if(!this._isElement(this._$element)) {
-	                        return MyBalloonLayout.superclass.getShape.call(this);
-	                    }
-	                    var position = this._$element.position();
-	                    return new ymaps.shape.Rectangle(new ymaps.geometry.pixel.Rectangle([
-	                        [position.left, position.top], [
-	                            position.left + this._$element[0].offsetWidth,
-	                            position.top + this._$element[0].offsetHeight + this._$element.find('.arrow')[0].offsetHeight
-	                        ]
-	                    ]));
-	                },
-	                /**
-	                 * Проверяем наличие элемента (в ИЕ и Опере его еще может не быть).
-	                 * @function
-	                 * @private
-	                 * @name _isElement
-	                 * @param {jQuery} [element] Элемент.
-	                 * @returns {Boolean} Флаг наличия.
-	                 */
-	                _isElement: function (element) {
-	                    return element && element[0] && element.find('.arrow')[0];
-	                }
-	            });
-
-				   var MyBalloonContentLayout = ymaps.templateLayoutFactory.createClass(
-				   	'<div class="map__container">' + 
-				       '<div class="map__phone">$[properties.phone]</div>' +
-				       '<div class="map__email">$[properties.email]</div>' +
-				       '<div class="map__address">$[properties.address]</div>' +
-				    '</div>'   
-				   );
-
-	                var myPlacemark = new ymaps.Placemark([55.090799, 21.854223], {
-	                	phone: '+7 (4012) 123-123',
-	                	email: 'tilzit-info@mail.ru',
-	                    address: 'г. Советск, ул. Чапаева, 2',
-	                }, {
-	                	balloonContentLayout: MyBalloonContentLayout,
-	                	balloonLayout: MyBalloonLayout,
-	                    balloonShadow: false,
-	                    iconImageHref: '/images/map-baloon.png',
-	                    iconImageSize: [50, 78],
-	                    iconImageOffset: [-25, -78],
-	                    // hideIconOnBalloonOpen: false,
-	                });
-	                myMap.geoObjects.add(myPlacemark);
-	                myMap.controls.add('smallZoomControl');
-	            }
-	            ymaps.ready(init);
-	        });
-	    }
-	})();
-	</script>
-	
 	<div id="fb-root"></div>
 	<script>(function(d, s, id) {
 	  var js, fjs = d.getElementsByTagName(s)[0];

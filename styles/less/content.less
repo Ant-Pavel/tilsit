@@ -122,8 +122,13 @@
 	.bg();
 }
 
+.content .tables {
+	display: flex;
+	justify-content: space-between;
+}
+
 .content table:not([class]) {
-	width: 100%;
+	width: 415px;
 	margin: 0;
 	margin-bottom: 20px;
 	padding: 0;
@@ -140,14 +145,13 @@
 	border: 1px solid #f1f2f8;
 }
 
-
-
 .content ol:not([class]) {
 	list-style: none;
 	padding: 0;
 	margin: 0;
 	display: flex;
 	flex-wrap: wrap;
+	counter-reset: item;
 }
 
 .content ol li {
@@ -159,12 +163,14 @@
 	line-height: 20px;
 }
 
+
+
 .content ol li:before {
 	position: absolute;
-	content: "";
+	content: counter(item);
+	counter-increment: item;
 	left: 0;
 	top: 0;
-	width: 17px;
-	height: 17px;
-	.bg();
+	color: #2e2b7b;
+	font-weight: 700;
 }
