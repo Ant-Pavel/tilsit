@@ -896,6 +896,8 @@ a.weatherInformer22:hover {
   line-height: 18px;
 }
 .button {
+  display: block;
+  text-decoration: none;
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: center;
@@ -957,6 +959,11 @@ a.weatherInformer22:hover {
   border-color: #e5c727;
   font-weight: 700;
   width: 115px;
+}
+.button--article-preview {
+  width: 115px;
+  margin-bottom: 13px;
+  margin-left: auto;
 }
 .promo {
   display: -webkit-box;
@@ -1756,22 +1763,69 @@ a.weatherInformer22:hover {
   line-height: 20px;
   border-bottom: 1px solid #d5d5d5;
 }
+.article-preview {
+  padding-top: 20px;
+  border-bottom: 1px solid #d5d5d5;
+}
+.article-preview__title {
+  margin-bottom: 15px;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 500;
+}
+.article-preview__descr p {
+  margin-bottom: 20px;
+}
+/***************************/
+/*Article Preview Gallery*/
+/****************************/
 .article-preview__gal-list {
   list-style: none;
   margin: 0;
   margin: 0 -5px -5px;
+  padding: 0;
 }
-.article-preview__gal-item:first-child {
-  width: 50%;
+.article-preview__gal-list:after {
+  clear: both;
+  content: "";
+  display: table;
 }
 .article-preview__gal-item {
   float: left;
   width: 25%;
-  padding: 5px;
+  padding: 0 5px 10px;
+  overflow: hidden;
+}
+.article-preview__gal-item:first-child {
+  width: 50%;
+  padding-bottom: 5px;
 }
 .article-preview__gal-link {
   display: block;
+  position: relative;
   overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.article-preview__gal-link:before {
+  content: '';
+  display: block;
+  padding-bottom: 54.4%;
+}
+.article-preview__gal-item:first-child .article-preview__gal-link:before {
+  padding-bottom: 55.4%;
+}
+.article-preview__gal-item img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  min-height: 100%;
+  min-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 p {
   font-size: 15px;
