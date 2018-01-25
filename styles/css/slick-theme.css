@@ -204,9 +204,9 @@
 }
 
 /*************************/
-/*КАСТОМИЗАЦИЯ СТРЕЛОЧЕК*/
+/*КАСТОМИЗАЦИЯ СТРЕЛОЧЕК ДЛЯ СЛАЙДЕРА В ШАПКЕ ГЛАВНОЙ СТРАНИЦЫ*/
 /*************************/
-.slick-arrow {
+.slick-arrow-index-top {
     cursor: pointer;
     position: absolute;
     z-index: 10;
@@ -218,19 +218,19 @@
     background-color: transparent;
 }
 
-.slick-arrow:hover {
+.slick-arrow-index-top:hover {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-.slick-arrow--prev {
+.slick-arrow-index-top--prev {
     left: 20px;
 }
 
-.slick-arrow--next {
+.slick-arrow-index-top--next {
     right: 20px;
 }
 
-.slick-arrow:before {
+.slick-arrow-index-top:before {
     position: absolute;
     content: "";
     top: 7px;
@@ -243,17 +243,17 @@
     border-top-width: 0;
 }
 
-.slick-arrow--next:before {
+.slick-arrow-index-top--next:before {
     left: 5px;
     transform: rotate(-45deg);
 }
 
-.slick-arrow--prev:before {
+.slick-arrow-index-top--prev:before {
     transform: rotate(135deg);
 }
 
 /*************************/
-/*КАСТОМИЗАЦИЯ ТОБОВ КВАДРАТИКОВ*/
+/*КАСТОМИЗАЦИЯ ТОБОВ КВАДРАТИКОВ ДЛЯ СЛАЙДЕРА В ШАПКЕ ГЛАВНОЙ СТРАНИЦЫ */
 /*************************/
 .slick-dots-custom {
     position: absolute;
@@ -293,4 +293,54 @@
 /* the parent */
 .slick-list {
     margin: 0 -10px;
+}
+
+/*************************/
+/*КАСТОМИЗАЦИЯ СТРЕЛОЧЕК ДЛЯ СЛАЙДЕРА В ШАПКЕ ГЛАВНОЙ СТРАНИЦЫ*/
+/*************************/
+
+.slick-arrow-main-slide {
+    cursor: pointer;
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    margin-top: -10px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #eaded3;
+    background-color: transparent;
+}
+
+.slick-arrow-main-slide:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.slick-arrow-main-slide--prev {
+    left: 23px;
+}
+
+.slick-arrow-main-slide--next {
+    right: 23px;
+}
+
+.slick-arrow-main-slide:before {
+    position: absolute;
+    content: "";
+    top: 10px;
+    left: 12px;
+    z-index: 10;
+    width: 7px;
+    height: 7px;
+    border: 1px solid #fff;
+    border-left-width: 0;
+    border-top-width: 0;
+}
+
+.slick-arrow-main-slide--next:before {
+    left: 8px;
+    transform: rotate(-45deg);
+}
+
+.slick-arrow-main-slide--prev:before {
+    transform: rotate(135deg);
 }

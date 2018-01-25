@@ -1,9 +1,13 @@
 .footer {
 	padding-top: 25px;
-	background-repeat: repeat-y;
+	background-repeat: no-repeat;
 	background-position: top center;
 	background-image: url(../../images/footer-background.jpg);
-	background-color: #2d2b7b;
+	background-color: #262376;
+}
+
+.footer--inner {
+	margin-top: 55px;
 }
 
 .footer__nav {
@@ -11,15 +15,18 @@
 }
 
 .footer__nav-list {
+	width: 1170px;
 	list-style: none;
 	margin: 0;
 	padding: 0;
-	// display: flex;
-	// flex-wrap: wrap;
+    -moz-column-count: 5;
 	column-count: 5;
+	font-size: 0;
 }
 
 .footer__nav-item {
+	display: inline-block;
+	vertical-align: top;
 	width: 234px;
 }
 

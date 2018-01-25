@@ -4,9 +4,9 @@
 	<meta charset="UTF-8">
 	<title>Тильзит - Главная страница</title>
 	<meta name="robots" content="noindex, nofollow"/>
-	<link rel="stylesheet" href="styles/css/style.css">
 	<link rel="stylesheet" href="styles/css/slick.css">
 	<link rel="stylesheet" href="styles/css/slick-theme.css">
+	<link rel="stylesheet" href="styles/css/style.css">
 	<link rel="stylesheet" href="styles/css/jquery.fancybox.min.css">
 </head>
 <body>
@@ -32,69 +32,120 @@
 					<a href="#" target="_blank" class="page-header__social-link page-header__social-link--vk"></a>
 					<a href="#" target="_blank" class="page-header__social-link page-header__social-link--fb"></a>
 				</div>
-				<button type="button" class="button button--page-header">Прислать новость</button>
+				<a data-fancybox data-src="#feedback" type="button" class="button button--page-header">Прислать новость</a>
 				<button class="page-header__nav-toggler"></button>
 				<nav class="page-header__nav">
 					<ul class="page-header__nav-list">
-						<li class="page-header__nav-item"><a href="#">Город</a></li>
-						<li class="page-header__nav-item"><a href="#">Новости</a></li>
-						<li class="page-header__nav-item"><a href="#">Экономика</a></li>
-						<li class="page-header__nav-item"><a href="#">Галерея</a></li>
-						<li class="page-header__nav-item"><a href="#">Транспорт</a></li>
-						<li class="page-header__nav-item"><a href="contacts.html">Контакты</a></li>
+						<li class="page-header__nav-item">
+							<a href="#" class="page-header__nav-link" >Город</a>
+							<ul class="page-header__nav-list-2-level">
+								<li class="page-header__nav-item-2-level">
+									<a href="" class="page-header__nav-link-2-level">История города</a>
+								</li>
+								<li class="page-header__nav-item-2-level">
+									<a href="" class="page-header__nav-link-2-level">Культура</a>
+								</li>
+								<li class="page-header__nav-item-2-level">
+									<a href="" class="page-header__nav-link-2-level">Спорт</a>
+								</li>
+								<li class="page-header__nav-item-2-level">
+									<a href="" class="page-header__nav-link-2-level">Муждународные связи</a>
+								</li>
+								<li class="page-header__nav-item-2-level">
+									<a href="" class="page-header__nav-link-2-level">Туризм</a>
+								</li>
+								<li class="page-header__nav-item-2-level">
+									<a href="" class="page-header__nav-link-2-level">Образование</a>
+								</li>
+								<li class="page-header__nav-item-2-level">
+									<a href="" class="page-header__nav-link-2-level">Здравоохранение</a>
+								</li>
+							</ul>
+						</li>
+						<li class="page-header__nav-item">
+							<a href="#" class="page-header__nav-link" >Новости</a>
+							<ul class="page-header__nav-list-2-level">
+								<li class="page-header__nav-item-2-level">
+									<a href="" class="page-header__nav-link-2-level">История города</a>
+								</li>
+								<li class="page-header__nav-item-2-level">
+									<a href="" class="page-header__nav-link-2-level">Культура</a>
+								</li>
+								<li class="page-header__nav-item-2-level">
+									<a href="" class="page-header__nav-link-2-level">Спорт</a>
+								</li>
+								<li class="page-header__nav-item-2-level">
+									<a href="" class="page-header__nav-link-2-level">Муждународные связи</a>
+								</li>
+								<li class="page-header__nav-item-2-level">
+									<a href="" class="page-header__nav-link-2-level">Туризм</a>
+								</li>
+								<li class="page-header__nav-item-2-level">
+									<a href="" class="page-header__nav-link-2-level">Образование</a>
+								</li>
+								<li class="page-header__nav-item-2-level">
+									<a href="" class="page-header__nav-link-2-level">Здравоохранение</a>
+								</li>
+							</ul>
+						</li>
+						<li class="page-header__nav-item"><a class="page-header__nav-link" href="#">Экономика</a></li>
+						<li class="page-header__nav-item"><a class="page-header__nav-link" href="#">Галерея</a></li>
+						<li class="page-header__nav-item"><a class="page-header__nav-link" href="#">Транспорт</a></li>
 					</ul>
 				</nav>
 		</header>
 	</div>
-		<div class="container">
-			<div class="breadcrumbs">
-				<span class="breadcrumbs-link">Главная</span>
-				<span class="breadcrumbs-link breadcrumbs-link--active">Раздел</span>
-			</div>
+	<div class="container">
+		<div class="breadcrumbs">
+			<span class="breadcrumbs-link">Главная</span>
+			<span class="breadcrumbs-link breadcrumbs-link--active">Раздел</span>
 		</div>
+	</div>
 	<div class="container container--columns">
 		<div class="sidebar sidebar--310">
-			<ul class="nav-sidebar">
-				<li class="nav-sidebar__item nav-sidebar__item--has-children">
-					<a class="nav-sidebar__link ">Город</a>
-					<ul class="nav-sidebar__list">
-						<li class="nav-sidebar__item nav-sidebar__item--has-children">
-							<a class="nav-sidebar__link nav-sidebar__link--active" href="#">История города</a>
-							<ul class="nav-sidebar__list-level-2">
-								<li class="nav-sidebar__item-level-2">
-									<a href="" class="nav-sidebar__link-level-2 nav-sidebar__link-level-2--active">Музей истории города Советска</a></li>
-								<li class="nav-sidebar__item-level-2">
-									<a href="#" class="nav-sidebar__link-level-2">«Тильзит-театр»</a>
-								</li>
-								<li class="nav-sidebar__item-level-2">
-									<a href="#" class="nav-sidebar__link-level-2">ЦКД «Парус»</a>
-								</li>
-								<li class="nav-sidebar__item-level-2">
-									<a href="#" class="nav-sidebar__link-level-2">ДК ЦБЗ</a>
-								</li>
-							</ul>
-						</li>
-						<li class="nav-sidebar__item">
-							<a class="nav-sidebar__link" href="#">Культура</a>
-						</li>
-						<li class="nav-sidebar__item">
-							<a class="nav-sidebar__link" href="#">Спорт</a>
-						</li>
-						<li class="nav-sidebar__item">
-							<a class="nav-sidebar__link" href="#">Международные связи</a>
-						</li>
-						<li class="nav-sidebar__item">
-							<a class="nav-sidebar__link" href="#">Туризм</a>
-						</li>
-						<li class="nav-sidebar__item">
-							<a class="nav-sidebar__link" href="#">Образование</a>
-						</li>
-						<li class="nav-sidebar__item">
-							<a class="nav-sidebar__link" href="#">Здравоохранение</a>
-						</li>
-					</ul>
-				</li>
-			</ul>
+			<div class="nav-sidebar">
+				<ul class="nav-sidebar__list nav-sidebar__list--1-level active">
+					<li class="nav-sidebar__item nav-sidebar__item--has-children">
+						<a class="nav-sidebar__link nav-sidebar__link--1-level">Город</a>
+						<ul class="nav-sidebar__list nav-sidebar__list--2-level">
+							<li class="nav-sidebar__item nav-sidebar__item--has-children">
+								<a class="nav-sidebar__link nav-sidebar__link--2-level nav-sidebar__link--active" href="#">История города</a>
+								<ul class="nav-sidebar__list nav-sidebar__list--3-level">
+									<li class="nav-sidebar__item">
+										<a href="" class="nav-sidebar__link nav-sidebar__link--3-level nav-sidebar__link--3-level--active">Музей истории города Советска</a></li>
+									<li class="nav-sidebar__item">
+										<a href="" class="nav-sidebar__link nav-sidebar__link--3-level">«Тильзит-театр»</a>
+									</li>
+									<li class="nav-sidebar__item">
+										<a href="" class="nav-sidebar__link nav-sidebar__link--3-level">ЦКД «Парус»</a>
+									</li>
+									<li class="nav-sidebar__item">
+										<a href="" class="nav-sidebar__link nav-sidebar__link--3-level">ДК ЦБЗ</a>
+									</li>
+								</ul>
+							</li>
+							<li class="nav-sidebar__item">
+								<a class="nav-sidebar__link nav-sidebar__link--2-level " href="">Культура</a>
+							</li>
+							<li class="nav-sidebar__item">
+								<a class="nav-sidebar__link nav-sidebar__link--2-level" href="">Спорт</a>
+							</li>
+							<li class="nav-sidebar__item">
+								<a class="nav-sidebar__link nav-sidebar__link--2-level" href="">Международные связи</a>
+							</li>
+							<li class="nav-sidebar__item">
+								<a class="nav-sidebar__link nav-sidebar__link--2-level" href="">Туризм</a>
+							</li>
+							<li class="nav-sidebar__item">
+								<a class="nav-sidebar__link nav-sidebar__link--2-level" href="">Образование</a>
+							</li>
+							<li class="nav-sidebar__item">
+								<a class="nav-sidebar__link nav-sidebar__link--2-level" href="">Здравоохранение</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
 			<div class="news-sidebar news-sidebar--section">
 				<span class="news-sidebar__title">Важные новости</span>
 				<div class="news-item news-item--pr">
@@ -176,122 +227,99 @@
 			</div>
 		</div>
 		<div class="base base--840">
-				<h1 class="page-title">Галерея(пр. Видеоблог "Тильзит-Инфо")</h1>
-				<div class="content">
-					<img width="340" height="215" class="align-right" src="images/article-preview3.jpg" alt="">
-					<p>Приступая к доказательству следует безапелляционно заявить, что геодезическая линия стремительно позиционирует постулат, как и предполагалось. Линейное уравнение решительно развивает аксиоматичный разрыв функции, что и требовалось доказать. Огибающая семейства прямых положительна. Тройной интеграл, конечно, притягивает разрыв функции. Тем не менее, первая производная стабилизирует многомерный степенной ряд, при этом, вместо 13 можно взять любую другую константу. Приступая к доказательству следует безапелляционно заявить, что геодезическая линия стремительно позиционирует постулат, как и предполагалось. Линейное уравнение решительно развивает</p>
-					<p>Приступая к доказательству следует безапелляционно заявить, что геодезическая линия стремительно позиционирует постулат, как и предполагалось. Линейное уравнение решительно развивает аксиоматичный разрыв функции, что и требовалось доказать. Огибающая семейства прямых положительна. Тройной интеграл, конечно, притягивает разрыв функции. Тем не менее, первая производная стабилизирует многомерный степенной ряд, при этом, вместо 13 можно взять любую другую константу.</p>
-					<a href="images/article-preview2.jpg">
-						<img width="198" height="150"  src="images/article-preview2.jpg" class="align-left" alt="">
-					</a>
-					<a href="images/article-preview2.jpg">
-						<img width="198" height="150" src="images/article-preview3.jpg" class="align-left" alt="">
-					</a>
-					<img width="198" height="150" src="images/article-preview2.jpg" class="align-left" alt="">
-					<img width="198" height="150" src="images/article-preview2.jpg" class="align-left" style="margin-right: 0;" alt="">
+			<h1 class="page-title">Галерея(пр. Видеоблог "Тильзит-Инфо")</h1>
+			<div class="content">
+				<a href="images/content-image-big.jpg">
+					<img width="340" height="215" class="align-right" src="images/content-image-big.jpg" alt="">
+				</a>
+				<p>Приступая к доказательству следует безапелляционно заявить, что геодезическая линия стремительно позиционирует постулат, как и предполагалось. Линейное уравнение решительно развивает аксиоматичный разрыв функции, что и требовалось доказать. Огибающая семейства прямых положительна. Тройной интеграл, конечно, притягивает разрыв функции. Тем не менее, первая производная стабилизирует многомерный степенной ряд, при этом, вместо 13 можно взять любую другую константу. Приступая к доказательству следует безапелляционно заявить, что геодезическая линия стремительно позиционирует постулат, как и предполагалось. Линейное уравнение решительно развивает</p>
+				<p>Приступая к доказательству следует безапелляционно заявить, что геодезическая линия стремительно позиционирует постулат, как и предполагалось. Линейное уравнение решительно развивает аксиоматичный разрыв функции, что и требовалось доказать. Огибающая семейства прямых положительна. Тройной интеграл, конечно, притягивает разрыв функции. Тем не менее, первая производная стабилизирует многомерный степенной ряд, при этом, вместо 13 можно взять любую другую константу.</p>
+				<a href="images/article-preview2.jpg">
+					<img width="198" height="150"  src="images/article-preview2.jpg" class="align-left" alt="">
+				</a>
+				<a href="images/article-preview2.jpg">
+					<img width="198" height="150" src="images/article-preview3.jpg" class="align-left" alt="">
+				</a>
+				<img width="198" height="150" src="images/article-preview2.jpg" class="align-left" alt="">
+				<img width="198" height="150" src="images/article-preview2.jpg" class="align-left" style="margin-right: 0;" alt="">
 
-					<p><span class="download-file">Скачать файл</span>
-						<a href="" class="file-link file-link--pdf"></a>
-						<a href="" class="file-link file-link--word"></a>
-						<a href="" class="file-link file-link--excel"></a>
-					</p>
+				<p><span class="download-file">Скачать файл</span>
+					<a href="" class="file-link file-link--pdf"></a>
+					<a href="" class="file-link file-link--word"></a>
+					<a href="" class="file-link file-link--excel"></a>
+				</p>
 
-					<h1>Заголовок H1</h1>
-					<p>Приступая к доказательству следует безапелляционно заявить, что геодезическая линия стремительно позиционирует постулат, как и предполагалось. Линейное уравнение решительно развивает аксиоматичный разрыв функции, что и требовалось доказать. Огибающая семейства прямых положительна. Тройной интеграл, конечно, притягивает разрыв функции.</p>
+				<h1>Заголовок H1</h1>
+				<p>Приступая к доказательству следует безапелляционно заявить, что геодезическая линия стремительно позиционирует постулат, как и предполагалось. Линейное уравнение решительно развивает аксиоматичный разрыв функции, что и требовалось доказать. Огибающая семейства прямых положительна. Тройной интеграл, конечно, притягивает разрыв функции.</p>
 
-					<h2>Заголовок H2</h2>
-					<p>Приступая к доказательству следует безапелляционно заявить, что геодезическая линия стремительно позиционирует постулат, как и предполагалось. Линейное уравнение решительно развивает аксиоматичный разрыв функции, что и требовалось доказать. Огибающая семейства прямых положительна. Тройной интеграл, конечно, притягивает разрыв функции.</p>
+				<h2>Заголовок H2</h2>
+				<p>Приступая к доказательству следует безапелляционно заявить, что геодезическая линия стремительно позиционирует постулат, как и предполагалось. Линейное уравнение решительно развивает аксиоматичный разрыв функции, что и требовалось доказать. Огибающая семейства прямых положительна. Тройной интеграл, конечно, притягивает разрыв функции.</p>
 
-					<h3>Заголовок H3</h3>
-					<p>Приступая к доказательству следует безапелляционно заявить, что геодезическая линия стремительно позиционирует постулат, как и предполагалось. Линейное уравнение решительно развивает аксиоматичный разрыв функции, что и требовалось доказать. Огибающая семейства прямых положительна. Тройной интеграл, конечно, притягивает разрыв функции.</p>
+				<h3>Заголовок H3</h3>
+				<p>Приступая к доказательству следует безапелляционно заявить, что геодезическая линия стремительно позиционирует постулат, как и предполагалось. Линейное уравнение решительно развивает аксиоматичный разрыв функции, что и требовалось доказать. Огибающая семейства прямых положительна. Тройной интеграл, конечно, притягивает разрыв функции.</p>
 
-					<h4>Заголовок H4</h4>
-					<p>Приступая к доказательству следует безапелляционно заявить, что геодезическая линия стремительно позиционирует постулат, как и предполагалось. Линейное уравнение решительно развивает аксиоматичный разрыв функции, что и требовалось доказать. Огибающая семейства прямых положительна. Тройной интеграл, конечно, притягивает разрыв функции.</p>
-					<hr>
-					<ul>
-						<li>Линейное уравнение решительно развивает аксиоматичный разрыв функции, что и требовалось доказать.</li>
-						<li>Линейное уравнение решительно развивает аксиоматичный разрыв функции, что и требовалось доказать.</li>
-						<li>Линейное уравнение решительно развивает аксиоматичный разрыв функции, что и требовалось доказать.</li>
-						<li>Линейное уравнение решительно развивает аксиоматичный разрыв функции, что и требовалось доказать.</li>
-					</ul>
-					<hr>
-					<div class="tables">
-						<table>
-							<tr>
-								<td>Приступая к доказательству следует заявить</td>
-							</tr>
-							<tr>
-								<td>Приступая к доказательству следует заявить</td>
-							</tr>
-							<tr>
-								<td>Приступая к доказательству следует заявить</td>
-							</tr>
-							<tr>
-								<td>Приступая к доказательству следует заявить</td>
-							</tr>
-						</table>
-
-						<table>
-							<tr>
-								<td>Приступая к доказательству следует заявить</td>
-							</tr>
-							<tr>
-								<td>Приступая к доказательству следует заявить</td>
-							</tr>
-							<tr>
-								<td>Приступая к доказательству следует заявить</td>
-							</tr>
-							<tr>
-								<td>Приступая к доказательству следует заявить</td>
-							</tr>
-						</table>
-					</div>
-					
-					<hr>
-
-					<ol>
-						<li>Тем не менее, первая производная стабилизирует многомерный степенной ряд, при этом</li>
-						<li>Тем не менее, первая производная стабилизирует многомерный степенной ряд, при этом</li>
-						<li>Тем не менее, первая производная стабилизирует многомерный степенной ряд, при этом</li>
-						<li>Тем не менее, первая производная стабилизирует многомерный степенной ряд, при этом</li>
-					</ol>
-
-					<p>Приступая к доказательству следует безапелляционно заявить, что геодезическая линия стремительно позиционирует постулат, как и предполагалось. Линейное уравнение решительно развивает аксиоматичный разрыв функции, что и требовалось доказать. Огибающая семейства прямых положительна. Тройной интеграл, конечно, притягивает разрыв функции. Тем не менее, первая производная стабилизирует многомерный степенной ряд, при этом, вместо 13 можно взять любую другую константу.</p>
-
-					<p>Приступая к доказательству следует безапелляционно заявить, что геодезическая линия стремительно позиционирует постулат, как и предполагалось. Линейное уравнение решительно развивает аксиоматичный разрыв функции, что и требовалось доказать. Огибающая семейства прямых положительна. Тройной интеграл, конечно, притягивает разрыв функции. Тем не менее, первая производная стабилизирует многомерный степенной ряд, при этом, вместо 13 можно взять любую другую константу. </p>
-				</div>
-			<div class="pagination">
-				<ul class="pagination__list">
-					<li class="pagination__item">
-						<a href="" class="pagination__link pagination__link--prev"><</a>
-					</li>
-					<li class="pagination__item">
-						<a href="" class="pagination__link">1</a>
-					</li>
-					<li class="pagination__item">
-						<a href="" class="pagination__link">2</a>
-					</li>
-					<li class="pagination__item">
-						<a href="" class="pagination__link">3</a>
-					</li>
-					<li class="pagination__item">
-						<a href="" class="pagination__link pagination__link--active">4</a>
-					</li>
-					<li class="pagination__item">
-						<a href="" class="pagination__link">5</a>
-					</li>
-					<li class="pagination__item">
-						<a href="" class="pagination__link pagination__link--next pagination__link--disabled">></a>
-					</li>
+				<h4>Заголовок H4</h4>
+				<p>Приступая к доказательству следует безапелляционно заявить, что геодезическая линия стремительно позиционирует постулат, как и предполагалось. Линейное уравнение решительно развивает аксиоматичный разрыв функции, что и требовалось доказать. Огибающая семейства прямых положительна. Тройной интеграл, конечно, притягивает разрыв функции.</p>
+				<hr>
+				<ul>
+					<li>Линейное уравнение решительно развивает аксиоматичный разрыв функции, что и требовалось доказать.</li>
+					<li>Линейное уравнение решительно развивает аксиоматичный разрыв функции, что и требовалось доказать.</li>
+					<li>Линейное уравнение решительно развивает аксиоматичный разрыв функции, что и требовалось доказать.</li>
+					<li>Линейное уравнение решительно развивает аксиоматичный разрыв функции, что и требовалось доказать.</li>
 				</ul>
+				<hr>
+				<div class="tables">
+					<table>
+						<tr>
+							<td>Приступая к доказательству следует заявить</td>
+						</tr>
+						<tr>
+							<td>Приступая к доказательству следует заявить</td>
+						</tr>
+						<tr>
+							<td>Приступая к доказательству следует заявить</td>
+						</tr>
+						<tr>
+							<td>Приступая к доказательству следует заявить</td>
+						</tr>
+					</table>
+
+					<table>
+						<tr>
+							<td>Приступая к доказательству следует заявить</td>
+						</tr>
+						<tr>
+							<td>Приступая к доказательству следует заявить</td>
+						</tr>
+						<tr>
+							<td>Приступая к доказательству следует заявить</td>
+						</tr>
+						<tr>
+							<td>Приступая к доказательству следует заявить</td>
+						</tr>
+					</table>
+				</div>
+				
+				<hr>
+
+				<ol>
+					<li>Тем не менее, первая производная стабилизирует многомерный степенной ряд, при этом</li>
+					<li>Тем не менее, первая производная стабилизирует многомерный степенной ряд, при этом</li>
+					<li>Тем не менее, первая производная стабилизирует многомерный степенной ряд, при этом</li>
+					<li>Тем не менее, первая производная стабилизирует многомерный степенной ряд, при этом</li>
+				</ol>
+
+				<p>Приступая к доказательству следует безапелляционно заявить, что геодезическая линия стремительно позиционирует постулат, как и предполагалось. Линейное уравнение решительно развивает аксиоматичный разрыв функции, что и требовалось доказать. Огибающая семейства прямых положительна. Тройной интеграл, конечно, притягивает разрыв функции. Тем не менее, первая производная стабилизирует многомерный степенной ряд, при этом, вместо 13 можно взять любую другую константу.</p>
+
+				<p>Приступая к доказательству следует безапелляционно заявить, что геодезическая линия стремительно позиционирует постулат, как и предполагалось. Линейное уравнение решительно развивает аксиоматичный разрыв функции, что и требовалось доказать. Огибающая семейства прямых положительна. Тройной интеграл, конечно, притягивает разрыв функции. Тем не менее, первая производная стабилизирует многомерный степенной ряд, при этом, вместо 13 можно взять любую другую константу. </p>
 			</div>
 		</div>
 	</div>
 
-	<div class="footer">
+	<div class="footer footer--inner">
 		<div class="container">
 			<nav class="footer__nav">
-				<ul class="footer__nav-list">
+				<ul class="footer__nav-list" style="-moz-column-count: 5">
 					<li class="footer__nav-item">
 						<a class="footer__nav-link">История города</a>
 					</li>
@@ -357,7 +385,7 @@
 					</li>
 				</ul>
 			</nav>
-
+				
 			<div class="footer__info">
 				<button class="button button--contacts-footer">Написать нам</button>
 				<div class="footer__social-block">
@@ -383,16 +411,40 @@
 					<span class="footer__developer-logo">
 						<img src="images/mts-logo.png" alt="">
 					</span>
-					<span class="footer__developer__text">Сделано в веб-студии “МультиСайт”<br> Разработка и продвижение сайтов</span>
+					<span class="footer__developer-text">Сделано в веб-студии “МультиСайт”<br> Разработка и продвижение сайтов</span>
 				</a>
 			</div>
 		</div>
 	</div>
+
+	<div id="feedback" style="display: none;" class="feedback-pop-up">
+		<form action="" class="feedback-form">
+			<div class="feedback-form__text">Напишите нам и мы свяжемся с Вами в ближайшее время</div>
+			<label class="field-text field-text--feedback" for="">
+				<input type="text" class="field-text__input" name="" placeholder="Имя">
+			</label>
+			<label class="field-text field-text--feedback" for="">
+				<input type="text" class="field-text__input" name="" placeholder="Телефон">
+			</label>
+			<label class="field-text field-text--feedback" for="">
+				<input type="text" class="field-text__input" name="" placeholder="E-mail">
+			</label>
+			<label class="field-textarea field-textarea--feedback" for="">
+				<textarea type="text" class="field-textarea__input" name="" placeholder="Комментарий"></textarea>
+			</label>
+			<label class="field-checkbox" for="">
+				<input type="checkbox" class="field-checkbox__input" id="" required>
+				<span class="field-checkbox__input-fake"></span>
+				<a href="" class="field-checkbox__personal-data-link" target="__blank">Я согласен на обработку персональных данных и ознакомлен с политикой конфиденциальности</a>
+			</label>
+			<button class="button button--feedback">Отправить</button>
+		</form>
+	</div>
 </body>
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/slick.min.js"></script>
-	<script src="js/user.js"></script>
 	<script src="js/jquery.fancybox.min.js"></script>
+	<script src="js/user.js"></script>
 
 	<div id="fb-root"></div>
 	<script>(function(d, s, id) {

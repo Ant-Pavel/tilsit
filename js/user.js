@@ -42,25 +42,26 @@
 			}
 		});
 
-		//Прокрутка страницы
+		// ********************
+		// Прокрутка страницы
+		// ********************
+		if (page_header.length) {
+		var scrollHeight = Math.max(
+		  document.body.scrollHeight, document.documentElement.scrollHeight,
+		  document.body.offsetHeight, document.documentElement.offsetHeight,
+		  document.body.clientHeight, document.documentElement.clientHeight
+		);
 
-		// if (page_header.length) {
-		// var scrollHeight = Math.max(
-		//   document.body.scrollHeight, document.documentElement.scrollHeight,
-		//   document.body.offsetHeight, document.documentElement.offsetHeight,
-		//   document.body.clientHeight, document.documentElement.clientHeight
-		// );
-
-		// $(window).on('scroll', function() {
-		//   if ( ($(window).scrollTop() > (page_header.outerHeight(true) + 25)) && (scrollHeight > 950) ) {
-		//    page_header.addClass('page-header--scroll');
-		//    page_header.parent('.container').addClass('container--scroll');
-		//   } else {
-		//    page_header.removeClass('page-header--scroll');
-		//    page_header.parent('.container').removeClass('container--scroll');
-		//   }
-		// });
-		// }
+		$(window).on('scroll', function() {
+		  if ( ($(window).scrollTop() > (page_header.outerHeight(true) + 25)) && (scrollHeight > 950) ) {
+		   page_header.addClass('page-header--scroll');
+		   page_header.parent('.container').addClass('container--scroll');
+		  } else {
+		   page_header.removeClass('page-header--scroll');
+		   page_header.parent('.container').removeClass('container--scroll');
+		  }
+		});
+		}
 
 
 		//Открытие - раскрытие меню при прокрутке страницы
@@ -72,8 +73,8 @@
 
 	$(document).ready(function() {
 		$('.slider-index-top').slick({
-			prevArrow: "<button class=\"slick-arrow slick-arrow--prev\"></button>",
-			nextArrow: "<button class=\"slick-arrow slick-arrow--next\"></button>",
+			prevArrow: "<button class=\"slick-arrow-index-top slick-arrow-index-top--prev\"></button>",
+			nextArrow: "<button class=\"slick-arrow-index-top slick-arrow-index-top--next\"></button>",
 			autoplay: true,
 			autoplaySpeed: 3000,
 			dots: true,
@@ -86,9 +87,9 @@
 			autoplay: true,
 			autoplaySpeed: 3000,
 			infinite: false,
-			prevArrow: "<button class=\"slick-arrow slick-arrow--prev\"></button>",
-			nextArrow: "<button class=\"slick-arrow slick-arrow--next\"></button>",
-			asNavFor: '.slider-big__nav'
+			prevArrow: "<button class=\"slick-arrow-main-slide slick-arrow-main-slide--prev\"></button>",
+			nextArrow: "<button class=\"slick-arrow-main-slide slick-arrow-main-slide--next\"></button>",
+			asNavFor: '.slider-big__nav',
 		});
 
 		$('.slider-big__nav').slick({
@@ -392,13 +393,13 @@
     const $menu_item = $('.nav-sidebar__item--has-children');
     
     $menu_item.click(function(event) {  // По клику на елемент с нужным классом  .nav-sidebar__item--has-children
-
-	    var $sub_menu = $(this).children('.nav-sidebar__list-level-2');    //Подсписок ul внутри li
+		event.stopPropagation();
+	    var $sub_menu = $(this).children('ul');    //Подсписок ul внутри li
 	    var $siblings = $(this).siblings();  //Соседние элементы кликнутого элемента
-	    var $siblings_sub_menu = $siblings.children('.nav-sidebar__list-level-2');
+	    var $siblings_sub_menu = $siblings.children('ul');
 
-	    if (!$(this).hasClass('active')) {  // При отсутствии класса opened
-		    $(this).addClass('active'); // Добавляем класс opened
+	    if (!$(this).hasClass('active')) {  // При отсутствии класса active
+		    $(this).addClass('active'); // Добавляем класс active
 		    $siblings.removeClass('active'); // Удаляем класс opened у соседних элементов
 		    $siblings_sub_menu.slideUp();  // Закрываем ulы внутри соседних элементов
 			$sub_menu.slideDown();  //Раскрываем вложенный в пункт меню список
@@ -406,19 +407,55 @@
 	    	$sub_menu.slideUp();
 		    $(this).removeClass('active');
 	    }
-
+	    });
 
 //************ 
 // Fancybox для картинок из контента
 // **********
-	const fancy_link = $(".content a");
-	    fancy_link.each(function() {
+	const fancy_link_content = $(".content a");
+	    fancy_link_content.each(function() {
 	    	var a = $(this).attr('href');
 	    	if ((a.indexOf('jpg') != -1) || (a.indexOf('jpeg') != -1) || (a.indexOf('png') != -1)) {
 	    		$(this).fancybox({});
 	    	}
-	    })
-	});
+	    });
+
+//************ 
+// Fancybox для картинок из слайдера
+// **********
+
+	const fancy_link_slider = $(".slider-big__main a");
+	    fancy_link_slider.each(function() {
+	    	var a = $(this).attr('href');
+	    	if ((a.indexOf('jpg') != -1) || (a.indexOf('jpeg') != -1) || (a.indexOf('png') != -1)) {
+	    		$(this).fancybox({});
+	    	}
+	    });
+
+//************ 
+// Fancybox для картинок в разделе
+// **********
+
+	const fancy_link__article_preview = $(".article-preview__gal-list a");
+	    fancy_link__article_preview.each(function() {
+	    	var a = $(this).attr('href');
+	    	if ((a.indexOf('jpg') != -1) || (a.indexOf('jpeg') != -1) || (a.indexOf('png') != -1)) {
+	    		$(this).fancybox({});
+	    	}
+	    });
+
+//************ 
+// Fancybox для картинок в разделе
+// **********
+
+	const fancy_link__gal = $(".gallery-item a");
+	    fancy_link__gal.each(function() {
+	    	var a = $(this).attr('href');
+	    	if ((a.indexOf('jpg') != -1) || (a.indexOf('jpeg') != -1) || (a.indexOf('png') != -1)) {
+	    		$(this).fancybox({});
+	    	}
+	    });
+	
 
 	//************ 
 	// Чекбокс в Feedback
@@ -434,8 +471,4 @@
 	    }
 	});
 	});
-	});
-
-// ***********************
-// Карта на странице контакты  END
-// ***********************
+});

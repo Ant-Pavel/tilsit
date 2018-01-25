@@ -27,7 +27,9 @@
 /*FIELD CHECKBOX*/
 /****************/
 .field-checkbox {
+	position: relative;
 	display: block;
+	padding-left: 15px;
 	margin-bottom: 10px;
 	font-size: 13px;
 	line-height: 15px;
@@ -39,7 +41,9 @@
 }
 
 .field-checkbox__input-fake {
-	display: inline-block;
+	position: absolute;
+	left: 0;
+	top: 3px;
 	width: 11px;
 	height: 11px;
 	border: 1px solid #e6e6e6;
@@ -47,5 +51,14 @@
 
 .field-checkbox__input-fake--checked {
 	background-color: #e3c31b;
+}
+
+.field-checkbox__personal-data-link {
+	color: #2b2b2b;
+	text-decoration: none;
+}
+
+.field-checkbox__personal-data-link:hover {
+	text-decoration: underline;
 }
 

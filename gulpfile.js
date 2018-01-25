@@ -15,7 +15,7 @@ gulp.task('style', ()=> {
 	pipe(less()).
 	pipe(postcss([
 			autoprefixer({
-				browsers: ['last 2 versions']
+				browsers: ['last 3 versions']
 				})
 		])).
 	pipe(gulp.dest('styles/css')).

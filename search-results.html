@@ -4,9 +4,9 @@
 	<meta charset="UTF-8">
 	<title>Тильзит - Главная страница</title>
 	<meta name="robots" content="noindex, nofollow"/>
-	<link rel="stylesheet" href="styles/css/style.css">
 	<link rel="stylesheet" href="styles/css/slick.css">
 	<link rel="stylesheet" href="styles/css/slick-theme.css">
+	<link rel="stylesheet" href="styles/css/style.css">
 	<link rel="stylesheet" href="styles/css/jquery.fancybox.min.css">
 </head>
 <body>
@@ -32,16 +32,65 @@
 					<a href="#" target="_blank" class="page-header__social-link page-header__social-link--vk"></a>
 					<a href="#" target="_blank" class="page-header__social-link page-header__social-link--fb"></a>
 				</div>
-				<button type="button" class="button button--page-header">Прислать новость</button>
+				<a data-fancybox data-src="#feedback" type="button" class="button button--page-header">Прислать новость</a>
 				<button class="page-header__nav-toggler"></button>
 				<nav class="page-header__nav">
 					<ul class="page-header__nav-list">
-						<li class="page-header__nav-item"><a href="#">Город</a></li>
-						<li class="page-header__nav-item"><a href="#">Новости</a></li>
-						<li class="page-header__nav-item"><a href="#">Экономика</a></li>
-						<li class="page-header__nav-item"><a href="#">Галерея</a></li>
-						<li class="page-header__nav-item"><a href="#">Транспорт</a></li>
-						<li class="page-header__nav-item"><a href="contacts.html">Контакты</a></li>
+						<li class="page-header__nav-item">
+							<a href="#" class="page-header__nav-link" >Город</a>
+							<ul class="page-header__nav-list-2-level">
+								<li class="page-header__nav-item-2-level">
+									<a href="" class="page-header__nav-link-2-level">История города</a>
+								</li>
+								<li class="page-header__nav-item-2-level">
+									<a href="" class="page-header__nav-link-2-level">Культура</a>
+								</li>
+								<li class="page-header__nav-item-2-level">
+									<a href="" class="page-header__nav-link-2-level">Спорт</a>
+								</li>
+								<li class="page-header__nav-item-2-level">
+									<a href="" class="page-header__nav-link-2-level">Муждународные связи</a>
+								</li>
+								<li class="page-header__nav-item-2-level">
+									<a href="" class="page-header__nav-link-2-level">Туризм</a>
+								</li>
+								<li class="page-header__nav-item-2-level">
+									<a href="" class="page-header__nav-link-2-level">Образование</a>
+								</li>
+								<li class="page-header__nav-item-2-level">
+									<a href="" class="page-header__nav-link-2-level">Здравоохранение</a>
+								</li>
+							</ul>
+						</li>
+						<li class="page-header__nav-item">
+							<a href="#" class="page-header__nav-link" >Новости</a>
+							<ul class="page-header__nav-list-2-level">
+								<li class="page-header__nav-item-2-level">
+									<a href="" class="page-header__nav-link-2-level">История города</a>
+								</li>
+								<li class="page-header__nav-item-2-level">
+									<a href="" class="page-header__nav-link-2-level">Культура</a>
+								</li>
+								<li class="page-header__nav-item-2-level">
+									<a href="" class="page-header__nav-link-2-level">Спорт</a>
+								</li>
+								<li class="page-header__nav-item-2-level">
+									<a href="" class="page-header__nav-link-2-level">Муждународные связи</a>
+								</li>
+								<li class="page-header__nav-item-2-level">
+									<a href="" class="page-header__nav-link-2-level">Туризм</a>
+								</li>
+								<li class="page-header__nav-item-2-level">
+									<a href="" class="page-header__nav-link-2-level">Образование</a>
+								</li>
+								<li class="page-header__nav-item-2-level">
+									<a href="" class="page-header__nav-link-2-level">Здравоохранение</a>
+								</li>
+							</ul>
+						</li>
+						<li class="page-header__nav-item"><a class="page-header__nav-link" href="#">Экономика</a></li>
+						<li class="page-header__nav-item"><a class="page-header__nav-link" href="#">Галерея</a></li>
+						<li class="page-header__nav-item"><a class="page-header__nav-link" href="#">Транспорт</a></li>
 					</ul>
 				</nav>
 		</header>
@@ -203,7 +252,7 @@
 	<div class="footer">
 		<div class="container">
 			<nav class="footer__nav">
-				<ul class="footer__nav-list">
+				<ul class="footer__nav-list" style="-moz-column-count: 5">
 					<li class="footer__nav-item">
 						<a class="footer__nav-link">История города</a>
 					</li>
@@ -269,7 +318,7 @@
 					</li>
 				</ul>
 			</nav>
-
+				
 			<div class="footer__info">
 				<button class="button button--contacts-footer">Написать нам</button>
 				<div class="footer__social-block">
@@ -295,16 +344,40 @@
 					<span class="footer__developer-logo">
 						<img src="images/mts-logo.png" alt="">
 					</span>
-					<span class="footer__developer__text">Сделано в веб-студии “МультиСайт”<br> Разработка и продвижение сайтов</span>
+					<span class="footer__developer-text">Сделано в веб-студии “МультиСайт”<br> Разработка и продвижение сайтов</span>
 				</a>
 			</div>
 		</div>
 	</div>
+
+	<div id="feedback" style="display: none;" class="feedback-pop-up">
+		<form action="" class="feedback-form">
+			<div class="feedback-form__text">Напишите нам и мы свяжемся с Вами в ближайшее время</div>
+			<label class="field-text field-text--feedback" for="">
+				<input type="text" class="field-text__input" name="" placeholder="Имя">
+			</label>
+			<label class="field-text field-text--feedback" for="">
+				<input type="text" class="field-text__input" name="" placeholder="Телефон">
+			</label>
+			<label class="field-text field-text--feedback" for="">
+				<input type="text" class="field-text__input" name="" placeholder="E-mail">
+			</label>
+			<label class="field-textarea field-textarea--feedback" for="">
+				<textarea type="text" class="field-textarea__input" name="" placeholder="Комментарий"></textarea>
+			</label>
+			<label class="field-checkbox" for="">
+				<input type="checkbox" class="field-checkbox__input" id="" required>
+				<span class="field-checkbox__input-fake"></span>
+				<a href="" class="field-checkbox__personal-data-link" target="__blank">Я согласен на обработку персональных данных и ознакомлен с политикой конфиденциальности</a>
+			</label>
+			<button class="button button--feedback">Отправить</button>
+		</form>
+	</div>
 </body>
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/slick.min.js"></script>
-	<script src="js/user.js"></script>
 	<script src="js/jquery.fancybox.min.js"></script>
+	<script src="js/user.js"></script>
 
 	<div id="fb-root"></div>
 	<script>(function(d, s, id) {

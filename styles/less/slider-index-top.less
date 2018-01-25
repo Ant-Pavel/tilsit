@@ -42,12 +42,26 @@
 }
 
 .slider-big__main-link {
+	position: relative;
 	display: block;
 	height: 480px;
 	text-decoration: none;
 }
 
-.slider-big__main-image {
+.slider-big__main-link:before {
+	position: absolute;
+	bottom: 2px;
+	left: 0;
+	content: attr(data-title);
+	font-size: 13px;
+	line-height: 15px;
+	color: #fff;
+	padding: 10px 15px;
+	background-color: rgba(0,0,0,0.5);
+	font-family: "Roboto", "Arial", sans-serif;
+}
+
+.slider-big__main-img {
 	max-width: 100%;
 	height: auto;
 }

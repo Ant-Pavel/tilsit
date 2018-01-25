@@ -192,7 +192,11 @@
 	flex-wrap: wrap;
 }
 
-.page-header__nav-item a {
+.page-header__nav-item {
+	position: relative;
+}
+
+.page-header__nav-item .page-header__nav-link {
 	display: block;
 	position: relative;
 	padding: 10px 50px;
@@ -204,12 +208,20 @@
 	color: #fff;
 }
 
-.page-header--scroll .page-header__nav-item a {
+.page-header__nav-link:hover {
+	color: #d8bc2e;
+}
+
+.page-header--scroll .page-header__nav-item .page-header__nav-link {
 	color: #242175;
 	padding: 10px 40px;
 }
 
-.page-header__nav-item:not(:first-child) a:before {
+.page-header--scroll .page-header__nav-item .page-header__nav-link:hover {
+	color: #d8bc2e;
+}
+
+.page-header__nav-item:not(:first-child) .page-header__nav-link:before {
 	position: absolute;
 	content: "";
 	top: 13px;
@@ -247,3 +259,40 @@
 	display: block;
 }
 
+
+// ******************
+// Меню второго уровня
+// ******************
+
+.page-header__nav-list-2-level {
+	display: none;
+	width: 240px;
+	margin: 0;
+	padding: 5px 6px;
+	list-style: none;
+	position: absolute;
+    top: 42px;
+    left: 17px;
+	z-index: 1;
+	background-color: #fff;
+	border: 1px solid #e2e2e2;
+}
+
+.page-header__nav-item:hover > .page-header__nav-list-2-level {
+	display: block;
+}
+
+.page-header__nav-item-2-level:not(:last-child) .page-header__nav-link-2-level {
+	border-bottom: 1px solid #f2f2f2;
+}
+
+.page-header__nav-list-2-level .page-header__nav-link-2-level {
+	display: block;
+	padding: 10px 0;
+	padding-left: 25px;
+	text-decoration: none;
+	font-size: 16px;
+	line-height: 20px;
+	font-weight: 500;
+	color: #494949;
+}
