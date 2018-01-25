@@ -385,13 +385,10 @@
 	        });
 	    }
 	})();
-	});
 
-// ***********************
-// Карта на странице контакты  END
-// ************************
-
-$(document).ready(function() {
+// **************
+// Меню в сайдбаре
+// ***************
     const $menu_item = $('.nav-sidebar__item--has-children');
     
     $menu_item.click(function(event) {  // По клику на елемент с нужным классом  .nav-sidebar__item--has-children
@@ -407,7 +404,7 @@ $(document).ready(function() {
 			$sub_menu.slideDown();  //Раскрываем вложенный в пункт меню список
 	    } else {
 	    	$sub_menu.slideUp();
-		    $(this).removeClass('active');	
+		    $(this).removeClass('active');
 	    }
 
 
@@ -437,5 +434,8 @@ $(document).ready(function() {
 	    }
 	});
 	});
+	});
 
-});
+// ***********************
+// Карта на странице контакты  END
+// ***********************
